@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\abc\\source\\repos\\MyBlogs\\UpdateAppSettings\\UpdateAppSettings.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\abc\\source\\repos\\MyBlogs\\UpdateAppSettings\\UpdateAppSettings.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\abc\\source\\repos\\MyBlogs\\UpdateAppSettings\\UpdateAppSettings.csproj",
+        "projectName": "UpdateAppSettings",
+        "projectPath": "C:\\Users\\abc\\source\\repos\\MyBlogs\\UpdateAppSettings\\UpdateAppSettings.csproj",
+        "packagesPath": "C:\\Users\\abc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\abc\\source\\repos\\MyBlogs\\UpdateAppSettings\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\abc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "WixToolset.Dtf.CustomAction": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "WixToolset.Dtf.WindowsInstaller": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

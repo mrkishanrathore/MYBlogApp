@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "5Ho6DLessic=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogs_SetUp\\MyBlogs_SetUp.wixproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\abc\\.nuget\\packages\\wixtoolset.heat\\5.0.1\\wixtoolset.heat.5.0.1.nupkg.sha512",
+    "C:\\Users\\abc\\.nuget\\packages\\wixtoolset.ui.wixext\\5.0.1\\wixtoolset.ui.wixext.5.0.1.nupkg.sha512",
+    "C:\\Users\\abc\\.nuget\\packages\\wixtoolset.util.wixext\\5.0.1\\wixtoolset.util.wixext.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

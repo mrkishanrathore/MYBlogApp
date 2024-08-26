@@ -1,0 +1,15 @@
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\bin\Debug\net472\CustomAction.config
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\bin\Debug\net472\CheckPortAndConnection.dll
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\bin\Debug\net472\CheckPortAndConnection.CA.dll
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\bin\Debug\net472\CheckPortAndConnection.pdb
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\bin\Debug\net472\WixToolset.Dtf.WindowsInstaller.dll
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\obj\Debug\net472\CheckPortAndConnection.csproj.AssemblyReference.cache
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\obj\Debug\net472\CheckPortAndConnection.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\obj\Debug\net472\CheckPortAndConnection.AssemblyInfoInputs.cache
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\obj\Debug\net472\CheckPortAndConnection.AssemblyInfo.cs
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\obj\Debug\net472\CheckPortAndConnection.csproj.CoreCompileInputs.cache
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\obj\Debug\net472\CheckPortAndConnection.sourcelink.json
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\obj\Debug\net472\CheckPortAndConnection.CA.rsp
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\obj\Debug\net472\CheckPor.788916EE.Up2Date
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\obj\Debug\net472\CheckPortAndConnection.dll
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\obj\Debug\net472\CheckPortAndConnection.pdb

@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #222831;
+    color: white;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.card {
+    background-color: #2f2f2f;
+    color: white;
+     /* Dark background for the card */
+    border: 1px solid #333; /* Dark border */
+}
+
+.form-control {
+    background-color: #333; /* Dark background for form controls */
+    color: #fff; /* Light text color */
+}
+
+.form-control::placeholder {
+    color: #aaa; /* Lighter placeholder text */
+}
+
+.image-preview {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    width: 25vw;
+    border-radius: 10px; /* Add a slight border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a slight box shadow */
+    margin-bottom: 20px; /* Add some margin bottom for spacing */
+}
+
+#backButton {
+    width: 40px;
+    height: 34px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+
+}
+
+#backButton:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

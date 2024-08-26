@@ -254,5 +254,4 @@ C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\refint\MyBlogs.dll
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\MyBlogs.pdb
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\MyBlogs.genruntimeconfig.cache
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\ref\MyBlogs.dll
-C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\appsettings - Copy.Development.json
-C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\appsettings - Copy.json
+C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\MyBlogs.sourcelink.json

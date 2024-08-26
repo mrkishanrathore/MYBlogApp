@@ -1,0 +1,75 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"
+	 xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+	<!-- Product definitions -->
+	<?if $(var.Platform)=x64 ?>
+	<?define ProductCode = "{C0142CC8-30B4-4857-A6E9-69665A824A16}" ?>
+	<?else?>
+	<?define ProductCode = "{DF0D52AC-EC30-4D7E-B7D5-5BF3B27DFE49}" ?>
+	<?endif?>
+
+	<!-- Fixed upgrade Id -->
+	<?define UpgradeCode = "{ADFB0528-7881-4D78-93CC-18F5A5FBD4F0}" ?>
+
+	<Package Name="!(loc.ProductName_$(var.Platform))" Language="!(loc.Language)" Version="$(var.BuildVersion)" Manufacturer="!(loc.Company)" UpgradeCode="$(var.UpgradeCode)" InstallerVersion="200" ProductCode="$(var.ProductCode)">
+
+		<SummaryInformation Manufacturer="!(loc.Company)" Description="!(loc.Description)" Keywords="!(loc.Keywords)" />
+
+		<MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeErrorMessage)" />
+
+		<!-- Include .cab file into .msi file -->
+		<MediaTemplate EmbedCab="yes" />
+
+		<!-- Define main app icon -->
+		<Icon Id="icon.ico" SourceFile="$(var.ProjectDir)\Assets\app.ico" />
+		<Property Id="ARPPRODUCTICON" Value="icon.ico" />
+
+		<!-- Help/Support website (shows in the Add/Remove programs). -->
+		<Property Id="ARPURLINFOABOUT" Value="https://www.your_website_name.com" />
+
+		<Property Id="WIXUI_EXITDIALOGOPTIONALTEXT" Value="Thank you for installing this product." />
+
+		<Property Id="CONNECTIONSTRING" Value="Connectionstring Here" />
+		<Property Id="PORTNUMBER" Value="8080" />
+		<Property Id="VALIDATIONRESULT" Value="Unknown" />
+		<Property Id="INSTALLDIR" Value="D:\inetpub\wwwroot\MyBlogs" />
+
+		<UIRef Id="CustomDlg_InstallDir" />
+
+		<WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)\Assets\License.rtf" />
+		<WixVariable Id="WixUIDialogBmp" Value="$(var.ProjectDir)\Assets\Background.bmp" />
+		<WixVariable Id="WixUIBannerBmp" Value="$(var.ProjectDir)\Assets\Banner.bmp" />
+
+		<Feature Id="ProductFeature" Title="MyBlogs_SetUp" Level="1">
+			<ComponentGroupRef Id="PublishedComponents" />
+		</Feature>
+
+		<!-- Define the binary for the custom action DLL 
+		<Binary Id="CustomActions" SourceFile="..\CheckPortAndConnection\bin\Debug\net472\CheckPortAndConnection.CA.dll" />-->
+		<Binary Id="CustomActions" SourceFile="$(var.CheckPortAndConnection.TargetDir)$(var.CheckPortAndConnection.TargetName).CA.dll" />
+		
+		<Binary Id="UpdateAppSettingsJson" SourceFile="$(var.UpdateAppSettings.TargetDir)$(var.UpdateAppSettings.TargetName).CA.dll" />
+
+		<!-- Define Custom Actions -->
+		<CustomAction Id="CheckPortSQLConnection" BinaryRef="CustomActions" DllEntry="ValidatePortAndConnection" Execute="immediate" />
+
+		<CustomAction Id="SetCustomActionData" Property="UpdateAppSettings"
+		              Value="INSTALLDIR=[INSTALLDIR];PORTNUMBER=[PORTNUMBER];CONNECTIONSTRING=[CONNECTIONSTRING]" />
+		
+		<CustomAction Id="UpdateAppSettings" BinaryRef="UpdateAppSettingsJson" DllEntry="UpdateAppSettings" Execute="deferred" Impersonate="yes"/>
+
+		<CustomAction Id="PrintLicense" ExeCommand="" Property="ValidatePortAndConnection" Execute="immediate" Return="check" />
+
+		
+		
+		<!-- Custom Action Sequence -->
+		<InstallExecuteSequence>
+			<Custom Action="CheckPortSQLConnection" Before="InstallInitialize"/>
+			<Custom Action="SetCustomActionData" Before="UpdateAppSettings"/>
+			<Custom Action="UpdateAppSettings" After="InstallFiles"/>
+		</InstallExecuteSequence>
+
+
+	</Package>
+</Wix>
+
+<!-- msiexec /i "MyBlogs-Installer-1.0.1.0-Release-x64.msi" /l* "Mylogfile.log"-->

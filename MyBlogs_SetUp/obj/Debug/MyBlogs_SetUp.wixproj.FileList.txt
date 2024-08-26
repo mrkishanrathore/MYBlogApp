@@ -1,0 +1,9 @@
+C:\Users\abc\source\repos\MyBlogs\MyBlogs_SetUp\bin\Debug\MyBlogs_SetUp-Debug-x86.msi
+C:\Users\abc\source\repos\MyBlogs\MyBlogs_SetUp\bin\Debug\MyBlogs_SetUp-Debug-x86.wixpdb
+obj\Debug\ComponentsGenerated.wixobj
+obj\Debug\Directories.wixobj
+obj\Debug\Product.wixobj
+obj\Debug\WixUI_InstallDir.wixobj
+obj\Debug\MyBlogs_SetUp.wixproj.BindContentsFileListnull.txt
+obj\Debug\MyBlogs_SetUp.wixproj.BindOutputsFileListnull.txt
+obj\Debug\MyBlogs_SetUp.wixproj.BindBuiltOutputsFileListnull.txt

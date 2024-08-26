@@ -1,0 +1,18 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<Fragment><!-- Define the directory structure where files and other components of your installer will be installed. 
+		<Directory Id="TARGETDIR" Name="SourceDir">-->
+
+		<!-- Add the PowerShell script to the installer -->
+		
+
+	
+			<Directory Id="IISINSTALLFOLDER" Name="inetpub">
+				<Directory Id="WWWROOT" Name="wwwroot">
+					<Directory Id="INSTALLFOLDER" Name="!(loc.ProductNameFolder)">
+						
+					</Directory>
+				</Directory>
+			</Directory>
+		</Fragment>
+
+</Wix>

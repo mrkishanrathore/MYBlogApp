@@ -1,0 +1,107 @@
+﻿<!-- Copyright (c) .NET Foundation and contributors. All rights reserved. Licensed under the Microsoft Reciprocal License. See LICENSE.TXT file in the project root for full license information. -->
+
+<!--
+First-time install dialog sequence:
+ - WixUI_WelcomeDlg
+ - WixUI_LicenseAgreementDlg
+ - WixUI_InstallDirDlg
+ - WixUI_VerifyReadyDlg
+ - WixUI_DiskCostDlg
+
+Maintenance dialog sequence:
+ - WixUI_MaintenanceWelcomeDlg
+ - WixUI_MaintenanceTypeDlg
+ - WixUI_InstallDirDlg
+ - WixUI_VerifyReadyDlg
+
+Patch dialog sequence:
+ - WixUI_WelcomeDlg
+ - WixUI_VerifyReadyDlg
+
+-->
+
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+
+	<Fragment>
+		<UI Id="CustomDlg_InstallDir">
+			<TextStyle Id="WixUI_Font_Normal" FaceName="Tahoma" Size="8" />
+			<TextStyle Id="WixUI_Font_Bigger" FaceName="Tahoma" Size="12" />
+			<TextStyle Id="WixUI_Font_Title" FaceName="Tahoma" Size="9" Bold="yes" />
+
+			<Property Id="DefaultUIFont" Value="WixUI_Font_Normal" />
+
+			<DialogRef Id="BrowseDlg" />
+			<DialogRef Id="DiskCostDlg" />
+			<DialogRef Id="ErrorDlg" />
+			<DialogRef Id="FatalError" />
+			<DialogRef Id="FilesInUse" />
+			<DialogRef Id="MsiRMFilesInUse" />
+			<DialogRef Id="PrepareDlg" />
+			<DialogRef Id="ProgressDlg" />
+			<DialogRef Id="ResumeDlg" />
+			<DialogRef Id="UserExit" />
+
+			<Dialog Id="InfoDlg" Width="200" Height="150" Title="Mini Dialog">
+				<Control Id="Text" Type="Text" X="15" Y="15" Width="170" Height="30" Text="[VALIDATIONRESULT]" />
+				<Control Id="CloseButton" Type="PushButton" X="70" Y="100" Width="60" Height="17" Default="yes" Text="Close">
+					<Publish Event="NewDialog" Value="PortAndConnectionDlg" Order="1"></Publish>
+				</Control>
+			</Dialog>
+
+			<Dialog Id="PortAndConnectionDlg" Width="370" Height="270" Title="MyBlogs Custom Installation Options">
+				<Control Id="PathText" Type="Text" X="15" Y="45" Width="200" Height="15" Text="Connection String :" />
+				<Control Id="PathEdit" Type="Edit" X="15" Y="60" Width="340" Height="18" Property="CONNECTIONSTRING" />
+				<Control Id="PortText" Type="Text" X="15" Y="90" Width="200" Height="15" Text="Port Number :" />
+				<Control Id="PortEdit" Type="Edit" X="15" Y="105" Width="340" Height="18" Property="PORTNUMBER" />
+				
+				<Control Id="CheckPORTSQLCONNECTIONButton" Type="PushButton" X="305" Y="130" Width="56" Height="17" Text="Check">
+					<Publish Event="DoAction" Value="CheckPortSQLConnection"></Publish>
+					<Publish Event="NewDialog" Value="InfoDlg" Order="1"></Publish>
+				</Control>
+
+				<!--
+				<Control Id="PortStatusText" Type="Text" X="15" Y="160" Width="340" Height="18" Text="[VALIDATIONRESULT]"/>-->
+
+				<Control Id="NextButton" Type="PushButton" X="305" Y="240" Width="56" Height="17" Default="yes" Text="Next">
+					<!--<Publish Event="NewDialog" Value="LicenseAgreementDlg"></Publish>-->
+				</Control>
+				<Control Id="BackButton" Type="PushButton" X="245" Y="240" Width="56" Height="17" Text="Back">
+					<!--<Publish Event="NewDialog" Value="WelcomeDlg"></Publish>-->
+				</Control>
+				<Control Id="CancelButton" Type="PushButton" X="185" Y="240" Width="56" Height="17" Text="Cancel">
+					<Publish Event="EndDialog" Value="Exit"></Publish>
+				</Control>
+			</Dialog>
+
+
+
+			<Publish Dialog="BrowseDlg" Control="OK" Event="SpawnDialog" Value="InvalidDirDlg" Order="4"/>
+
+			<Publish Dialog="ExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999" />
+
+			<Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="PortAndConnectionDlg" />
+
+			<!-- Define Dialog Navigation -->
+			<Publish Dialog="PortAndConnectionDlg" Control="BackButton" Event="NewDialog" Value="WelcomeDlg" />
+			<Publish Dialog="PortAndConnectionDlg" Control="NextButton" Event="NewDialog" Value="LicenseAgreementDlg" />
+
+
+			<Publish Dialog="LicenseAgreementDlg" Control="Back" Event="NewDialog" Value="PortAndConnectionDlg" />
+			<Publish Dialog="LicenseAgreementDlg" Control="Print" Event="DoAction" Value="PrintLicense" />
+			<Publish Dialog="LicenseAgreementDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg"/>
+
+			<Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="LicenseAgreementDlg" Order="1"/>
+
+
+			<Publish Dialog="MaintenanceWelcomeDlg" Control="Next" Event="NewDialog" Value="MaintenanceTypeDlg" />
+
+			<Publish Dialog="MaintenanceTypeDlg" Control="RepairButton" Event="NewDialog" Value="VerifyReadyDlg" />
+			<Publish Dialog="MaintenanceTypeDlg" Control="RemoveButton" Event="NewDialog" Value="VerifyReadyDlg" />
+			<Publish Dialog="MaintenanceTypeDlg" Control="Back" Event="NewDialog" Value="MaintenanceWelcomeDlg" />
+
+			<Property Id="ARPNOMODIFY" Value="1" />
+		</UI>
+
+		<UIRef Id="WixUI_Common" />
+	</Fragment>
+</Wix>

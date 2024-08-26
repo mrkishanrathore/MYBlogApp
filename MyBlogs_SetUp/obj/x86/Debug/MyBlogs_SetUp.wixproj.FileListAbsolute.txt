@@ -1,0 +1,6 @@
+C:\Users\abc\source\repos\MyBlogs\MyBlogs_SetUp\obj\x86\Debug\MyBlogs_SetUp.wixproj.CoreCompileInputs.cache
+C:\Users\abc\source\repos\MyBlogs\MyBlogs_SetUp\obj\x86\Debug\MyBlogs_SetUp-Debug-x86.msi
+C:\Users\abc\source\repos\MyBlogs\MyBlogs_SetUp\obj\x86\Debug\MyBlogs_SetUp-Debug-x86.wixpdb
+C:\Users\abc\source\repos\MyBlogs\MyBlogs_SetUp\obj\x86\Debug\MyBlogs_SetUp.wixproj.BindTracking-neutral.txt
+C:\Users\abc\source\repos\MyBlogs\MyBlogs_SetUp\bin\x86\Debug\MyBlogs_SetUp-Debug-x86.msi
+C:\Users\abc\source\repos\MyBlogs\MyBlogs_SetUp\bin\x86\Debug\MyBlogs_SetUp-Debug-x86.wixpdb

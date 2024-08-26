@@ -1,0 +1,2 @@
+C:\Users\abc\source\repos\MyBlogs\MyBlogs_SetUp\bin\Debug\MyBlogs_SetUp-Debug-x86.msi
+C:\Users\abc\source\repos\MyBlogs\MyBlogs_SetUp\bin\Debug\MyBlogs_SetUp-Debug-x86.wixpdb

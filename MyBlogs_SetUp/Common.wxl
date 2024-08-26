@@ -1,0 +1,21 @@
+﻿<WixLocalization Culture="en-us" xmlns="http://wixtoolset.org/schemas/v4/wxl">
+
+	<String Id="Company" Value="Kishan Rathore" />
+
+	<String Id="Description" Value="This a Test setup description." />
+	<String Id="Keywords" Value="dotnet, core, application, installer" />
+	<String Id="Comments" Value="Demo Comments" />
+
+	<String Id="ProductNameFolder" Value="MyBlogs" />
+	<String Id="ProductName" Value="MyBlogs" />
+
+	<String Id="ProductName_x86" Value="WixSetupMyBlogs (32bit)" />
+	<String Id="ProductName_x64" Value="WixSetupMyBlogs (64bit)" />
+
+	<String Id="DowngradeErrorMessage" Value="A newer version of WebSite is already installed." />
+
+	<String Id="Language" Value="1033" />
+
+	<String Id="Port" Value="8080" />
+
+</WixLocalization>

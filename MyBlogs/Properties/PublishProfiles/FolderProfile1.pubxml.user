@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>D:\mylog\top</_PublishTargetUrl>
-    <History>True|2024-07-30T11:00:35.0669978Z||;</History>
+    <_PublishTargetUrl>D:\BlogPublish</_PublishTargetUrl>
+    <History>True|2024-08-12T04:31:19.8146166Z||;True|2024-08-08T11:45:14.7481938+05:30||;True|2024-07-30T16:30:35.0669978+05:30||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
