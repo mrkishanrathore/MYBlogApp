@@ -1,18 +1,18 @@
 ﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
-	<Fragment><!-- Define the directory structure where files and other components of your installer will be installed. 
-		<Directory Id="TARGETDIR" Name="SourceDir">-->
+	<Fragment>
+		<!-- Define the directory structure where files and other components of your installer will be installed. -->
 
-		<!-- Add the PowerShell script to the installer -->
+		<?if $(var.Platform)=x64 ?>
+		<!-- Program Files (64bit) folder -->
+		<StandardDirectory Id="ProgramFiles64Folder">
+			<Directory Id="INSTALLFOLDER" Name="!(loc.ProductNameFolder)" />
+		</StandardDirectory>
+		<?else?>
 		
-
-	
-			<Directory Id="IISINSTALLFOLDER" Name="inetpub">
-				<Directory Id="WWWROOT" Name="wwwroot">
-					<Directory Id="INSTALLFOLDER" Name="!(loc.ProductNameFolder)">
-						
-					</Directory>
-				</Directory>
-			</Directory>
-		</Fragment>
-
+		<!-- Program Files (32bit) folder -->
+		<StandardDirectory Id="ProgramFilesFolder">
+			<Directory Id="INSTALLFOLDER" Name="!(loc.ProductNameFolder)" />
+		</StandardDirectory>
+		<?endif?>
+	</Fragment>
 </Wix>

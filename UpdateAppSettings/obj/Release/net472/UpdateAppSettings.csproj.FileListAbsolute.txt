@@ -23,3 +23,5 @@ C:\Users\abc\source\repos\MyBlogs\UpdateAppSettings\obj\Release\net472\UpdateAp.
 C:\Users\abc\source\repos\MyBlogs\UpdateAppSettings\obj\Release\net472\UpdateAppSettings.dll
 C:\Users\abc\source\repos\MyBlogs\UpdateAppSettings\obj\Release\net472\UpdateAppSettings.pdb
 C:\Users\abc\source\repos\MyBlogs\UpdateAppSettings\bin\Release\net472\Newtonsoft.Json.dll
+C:\Users\abc\source\repos\MyBlogs\UpdateAppSettings\bin\Release\net472\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\abc\source\repos\MyBlogs\UpdateAppSettings\bin\Release\net472\NBitcoin.dll

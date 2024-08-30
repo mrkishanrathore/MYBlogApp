@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #222831;
+    color: white;
+    overflow-x: hidden;
+}
+
+#updateFrom {
+    position: absolute; /* Use fixed to keep it in place relative to the viewport */
+    /* margin-top: 250px; */
+    left: 50%;
+    transform: translate( -50%); /* Center it horizontally and vertically */
+    z-index: 10000; /* Ensure it's above all other content */
+}
+
+.card {
+    background-color: #2f2f2f;
+    color: white;
+     /* Dark background for the card */
+    border: 1px solid #333; /* Dark border */
+}
+
+.form-control {
+    background-color: #333; /* Dark background for form controls */
+    color: #fff; /* Light text color */
+}
+
+.form-control::placeholder {
+    color: #aaa; /* Lighter placeholder text */
+}
+
+.imageSize {
+    width: 45vw;
+    height: 45vh;
+}
+
+#backButton {
+    width: 40px;
+    height: 34px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+
+}
+
+#backButton:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.onScroll{
+    overflow: hidden;
+}
+
+.blur{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+@media (max-width: 768px) {
+    .blogDisplayArea {
+        width: 100%;
+    }
+
+    .imageSize {
+        width: 90vw;
+        height: 45vh;
+    }
+
+    .commentsArea {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 60%;
+        height: 100%;
+        background-color: #31363F;
+        z-index: 1000;
+        pointer-events: auto;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #addComments {
+        min-height: 80vh;
+    }
+
+    .commentsArea.show {
+        transform: translateX(0);
+    }
+
+    .input-group {
+        margin-bottom: 1rem;
+    }
+
+    .fs-2 {
+        font-size: 1.5rem;
+    }
+
+    .p-3 {
+        padding: 1rem !important;
+    }
+
+    #updateFrom {
+        width : 90vw;
+    }
+}

@@ -1,0 +1,15 @@
+C:\Users\abc\source\repos\MyBlogs\CheckHttpsPortAndFile\bin\Release\net472\CustomAction.config
+C:\Users\abc\source\repos\MyBlogs\CheckHttpsPortAndFile\bin\Release\net472\CheckHttpsPortAndFile.dll
+C:\Users\abc\source\repos\MyBlogs\CheckHttpsPortAndFile\bin\Release\net472\CheckHttpsPortAndFile.CA.dll
+C:\Users\abc\source\repos\MyBlogs\CheckHttpsPortAndFile\bin\Release\net472\CheckHttpsPortAndFile.pdb
+C:\Users\abc\source\repos\MyBlogs\CheckHttpsPortAndFile\bin\Release\net472\WixToolset.Dtf.WindowsInstaller.dll
+C:\Users\abc\source\repos\MyBlogs\CheckHttpsPortAndFile\obj\Release\net472\CheckHttpsPortAndFile.csproj.AssemblyReference.cache
+C:\Users\abc\source\repos\MyBlogs\CheckHttpsPortAndFile\obj\Release\net472\CheckHttpsPortAndFile.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abc\source\repos\MyBlogs\CheckHttpsPortAndFile\obj\Release\net472\CheckHttpsPortAndFile.AssemblyInfoInputs.cache
+C:\Users\abc\source\repos\MyBlogs\CheckHttpsPortAndFile\obj\Release\net472\CheckHttpsPortAndFile.AssemblyInfo.cs
+C:\Users\abc\source\repos\MyBlogs\CheckHttpsPortAndFile\obj\Release\net472\CheckHttpsPortAndFile.csproj.CoreCompileInputs.cache
+C:\Users\abc\source\repos\MyBlogs\CheckHttpsPortAndFile\obj\Release\net472\CheckHttpsPortAndFile.sourcelink.json
+C:\Users\abc\source\repos\MyBlogs\CheckHttpsPortAndFile\obj\Release\net472\CheckHttpsPortAndFile.CA.rsp
+C:\Users\abc\source\repos\MyBlogs\CheckHttpsPortAndFile\obj\Release\net472\CheckHtt.720AF7A8.Up2Date
+C:\Users\abc\source\repos\MyBlogs\CheckHttpsPortAndFile\obj\Release\net472\CheckHttpsPortAndFile.dll
+C:\Users\abc\source\repos\MyBlogs\CheckHttpsPortAndFile\obj\Release\net472\CheckHttpsPortAndFile.pdb

@@ -46,6 +46,10 @@
         "net472": {
           "targetAlias": "net472",
           "dependencies": {
+            "NBitcoin": {
+              "target": "Package",
+              "version": "[7.0.37, )"
+            },
             "WixToolset.Dtf.CustomAction": {
               "target": "Package",
               "version": "[5.0.1, )"

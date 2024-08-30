@@ -31,6 +31,7 @@ C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\publish\Mic
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\publish\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\publish\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\publish\Microsoft.Extensions.DependencyModel.dll
+C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\publish\Microsoft.Extensions.Hosting.WindowsServices.dll
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\publish\Microsoft.Identity.Client.dll
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\publish\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\publish\Microsoft.IdentityModel.Abstractions.dll
@@ -79,6 +80,7 @@ C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\publish\Sys
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\publish\System.Runtime.Caching.dll
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\publish\System.Security.Cryptography.ProtectedData.dll
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\publish\System.Security.Permissions.dll
+C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\publish\System.ServiceProcess.ServiceController.dll
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\publish\System.Windows.Extensions.dll
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\publish\af\Humanizer.resources.dll
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\publish\ar\Humanizer.resources.dll

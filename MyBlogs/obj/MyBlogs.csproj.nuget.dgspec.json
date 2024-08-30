@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogs\\MyBlogs.csproj": {
-      "version": "1.0.1",
+      "version": "1.2.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogs\\MyBlogs.csproj",
         "projectName": "MyBlogs",
@@ -64,6 +64,10 @@
               "target": "Package",
               "version": "[8.0.7, )"
             },
+            "Microsoft.Extensions.Hosting.WindowsServices": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.3, )"
@@ -93,11 +97,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
         }
       }
     }

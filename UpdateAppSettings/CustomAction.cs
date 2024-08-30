@@ -1,6 +1,7 @@
 using System;
+using System.Diagnostics;
 using System.IO;
-using System.Xml.Linq;
+using System.Web.NBitcoin;
 using Newtonsoft.Json.Linq;
 using WixToolset.Dtf.WindowsInstaller;
 
@@ -13,27 +14,37 @@ namespace UpdateAppSettings
         {
             try
             {
-                // Retrieve installation directory and other settings
+                // Retrieve properties
                 string installDir = session.CustomActionData["INSTALLDIR"];
-                string portNumber = session.CustomActionData["PORTNUMBER"];
-                string connectionString = session.CustomActionData["CONNECTIONSTRING"];
-
-                /*string installDir = "D:\\inetpub\\wwwroot\\MyBlogs";
-                string portNumber = "8080";
-                string connectionString = "Demo string";*/
-
-                if (string.IsNullOrEmpty(installDir) || string.IsNullOrEmpty(portNumber) || string.IsNullOrEmpty(connectionString))
+                string httpPort = session.CustomActionData["HTTPPORT"];
+                string httpsPort = session.CustomActionData["HTTPSPORT"];
+                string encodedConnectionString = session.CustomActionData["CONNECTIONSTRING"];
+                string connectionString = HttpUtility.UrlDecode(encodedConnectionString); // Decode the connection string
+                string certPath = session.CustomActionData["CERTPATH"];
+                string certPassword = session.CustomActionData["CERTPASSWORD"];
+                string hostName = session.CustomActionData["HOSTNAME"];
+                string enableHttps = session.CustomActionData["ENABLEHTTPS"];
+                if (hostName == "example.io")
                 {
-                    session.Log("Error: One or more required properties are missing."+installDir+ " "+ portNumber +" "+ connectionString);
+                    hostName = "";
+                }
+
+                if (string.IsNullOrEmpty(installDir) ||
+                    string.IsNullOrEmpty(httpPort) ||
+                    string.IsNullOrEmpty(httpsPort) ||
+                    string.IsNullOrEmpty(connectionString) ||
+                    string.IsNullOrEmpty(certPath) ||
+                    string.IsNullOrEmpty(certPassword))
+                {
+                    session.Log("Error: One or more required properties are missing.");
                     return ActionResult.Failure;
                 }
 
                 string appSettingsPath = Path.Combine(installDir, "appsettings.json");
-
                 if (!File.Exists(appSettingsPath))
                 {
                     session.Log($"Error: appsettings.json file not found at {appSettingsPath}.");
-                    return ActionResult.Success;
+                    return ActionResult.Failure;
                 }
 
                 // Read the JSON file
@@ -43,27 +54,51 @@ namespace UpdateAppSettings
                 // Update the JSON object
                 if (jsonObject["ConnectionStrings"] != null)
                 {
-                    foreach (var connString in jsonObject["ConnectionStrings"])
-                    {
-                        connString.First.Replace(connectionString);
-                    }
+                    jsonObject["ConnectionStrings"]["BlodDbConnection"] = connectionString;
                 }
 
-                if (jsonObject["PortNumber"] != null)
+                if (jsonObject["Kestrel"] != null)
                 {
-                    jsonObject["PortNumber"] = portNumber;
+                    if(enableHttps == "1")
+                    {
+                        jsonObject["Kestrel"]["HttpsPort"] = int.Parse(httpsPort);
+                        jsonObject["Kestrel"]["CertPath"] = certPath;
+                        jsonObject["Kestrel"]["CertPassword"] = certPassword;
+                    }
+                    else
+                    {
+                        jsonObject["Kestrel"]["HttpsPort"] = "";
+                        jsonObject["Kestrel"]["CertPath"] = "";
+                        jsonObject["Kestrel"]["CertPassword"] = "";
+                    }
+                    jsonObject["Kestrel"]["HttpPort"] = int.Parse(httpPort);
+                    jsonObject["Kestrel"]["HostName"] = hostName;
+
                 }
 
                 // Write the updated JSON back to the file
                 File.WriteAllText(appSettingsPath, jsonObject.ToString());
 
                 session.Log("Successfully updated appsettings.json.");
+
+                string exePath = Path.Combine(installDir, "MyBlogs.exe");
+                if (File.Exists(exePath))
+                {
+                    Process.Start(exePath);
+                    session.Log($"Executed {exePath}.");
+                }
+                else
+                {
+                    session.Log($"Error: MyBlogs.exe not found at {exePath}.");
+                }
+
+
                 return ActionResult.Success;
             }
             catch (Exception ex)
             {
-                session.Log("Error: " + ex.Message);
-                return ActionResult.Failure;
+                session.Log("Error: " + ex.Message+" by kishan");
+                return ActionResult.Success;
             }
         }
     }

@@ -16,6 +16,7 @@
     <PackageReference Include="WixToolset.UI.wixext" Version="5.0.1" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CheckHttpsPortAndFile\CheckHttpsPortAndFile.csproj" />
     <ProjectReference Include="..\CheckPortAndConnection\CheckPortAndConnection.csproj" />
     <ProjectReference Include="..\UpdateAppSettings\UpdateAppSettings.csproj" />
   </ItemGroup>
@@ -23,38 +24,23 @@
   <Target Name="BeforeBuild">
     <!-- Clean previous build folder -->
     <Exec Command="rd /s /q ..\MyBlogs\bin\$(Configuration)\net8.0\win-$(Platform)" />
-    <!-- Publish .NET Core (or .NET 8) web app -->
-    <Exec Command="dotnet publish ..\MyBlogs\MyBlogs.csproj -c $(Configuration) -r win-$(Platform)" />
+    <!-- Publish .NET Core (or .NET 8) web app
+    <Exec Command="dotnet publish ..\MyBlogs\MyBlogs.csproj -c $(Configuration) -r win-$(Platform)" />-->
     <!-- Get assembly version -->
-    <GetAssemblyIdentity AssemblyFiles="..\MyBlogs\bin\$(Configuration)\net8.0\win-$(Platform)\MyBlogs.dll">
+    <GetAssemblyIdentity AssemblyFiles="..\MyBlogs\bin\$(Configuration)\net8.0\MyBlogs.dll">
       <Output TaskParameter="Assemblies" ItemName="AssemblyVersion" />
     </GetAssemblyIdentity>
     <!-- Define some Variables we need -->
     <PropertyGroup>
       <!-- Will add Application Build version -->
-      <DefineConstants>BuildVersion=%(AssemblyVersion.Version);BasePath=..\MyBlogs\bin\$(Configuration)\net8.0\win-$(Platform)</DefineConstants>
+      <DefineConstants>BuildVersion=%(AssemblyVersion.Version);BasePath=..\MyBlogs\publish</DefineConstants>
     </PropertyGroup>
-    <!-- Add All Project files and folder
-    <Exec Command="&quot;C:\Program Files (x86)\WiX Toolset v3.14\bin\heat.exe&quot; dir ..\MyBlogs\bin\$(Configuration)\net8.0\win-$(Platform) -cg PublishedComponents -dr INSTALLFOLDER -gg -srd -sreg -var var.BasePath -o ComponentsGenerated.wxs" />
-	  <HeatDirectory
-        OutputFile="ComponentsGenerated.wxs"
-        DirectoryRefId="INSTALLFOLDER"
-        ComponentGroupName="PublishedComponents"
-        SuppressCom="true"
-        Directory="..\MyBlogs\bin\$(Configuration)\net8.0\win-$(Platform)"
-        SuppressFragments="true"
-        SuppressRegistry="true"
-        SuppressRootDirectory="true"
-        AutoGenerateGuids="false"
-        GenerateGuidsNow="true"
-        ToolPath="C:\Program Files (x86)\WiX Toolset v3.14\bin"
-        PreprocessorVariable="var.BasePath"
-        />-->
-
-
+    <!-- 
+    <Exec Command="heat.exe dir ..\MyBlogs\bin\$(Configuration)\net8.0\win-$(Platform) -cg PublishedComponents -dr INSTALLFOLDER -gg -srd -sreg -var var.BasePath -o ComponentsGenerated.wxs" />-->
+    <HeatDirectory OutputFile="ComponentsGenerated.wxs" DirectoryRefId="INSTALLFOLDER" ComponentGroupName="PublishedComponents" SuppressCom="true" Directory="..\MyBlogs\publish" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" AutoGenerateGuids="false" GenerateGuidsNow="true" PreprocessorVariable="var.BasePath" />
   </Target>
   <Target Name="AfterBuild">
-    <GetAssemblyIdentity AssemblyFiles="..\MyBlogs\bin\$(Configuration)\net8.0\win-$(Platform)\MyBlogs.dll">
+    <GetAssemblyIdentity AssemblyFiles="..\MyBlogs\publish\MyBlogs.dll">
       <Output TaskParameter="Assemblies" ItemName="AssemblyVersion" />
     </GetAssemblyIdentity>
     <!-- Rename and move final MSI -->

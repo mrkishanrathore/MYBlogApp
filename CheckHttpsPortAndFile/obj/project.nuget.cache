@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "rR0DxKZ0N7k=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\abc\\source\\repos\\MyBlogs\\CheckHttpsPortAndFile\\CheckHttpsPortAndFile.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\abc\\.nuget\\packages\\wixtoolset.dtf.customaction\\5.0.1\\wixtoolset.dtf.customaction.5.0.1.nupkg.sha512",
+    "C:\\Users\\abc\\.nuget\\packages\\wixtoolset.dtf.windowsinstaller\\5.0.1\\wixtoolset.dtf.windowsinstaller.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

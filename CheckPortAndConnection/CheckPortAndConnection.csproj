@@ -8,6 +8,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="NBitcoin" Version="7.0.37" />
     <PackageReference Include="WixToolset.Dtf.CustomAction" Version="5.0.1" />
     <PackageReference Include="WixToolset.Dtf.WindowsInstaller" Version="5.0.1" />
   </ItemGroup>

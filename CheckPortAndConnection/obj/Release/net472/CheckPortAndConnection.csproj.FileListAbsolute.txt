@@ -13,3 +13,7 @@ C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\obj\Release\net472\Chec
 C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\obj\Release\net472\CheckPor.788916EE.Up2Date
 C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\obj\Release\net472\CheckPortAndConnection.dll
 C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\obj\Release\net472\CheckPortAndConnection.pdb
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\bin\Release\net472\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\bin\Release\net472\NBitcoin.dll
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\bin\Release\net472\Newtonsoft.Json.dll
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\bin\Release\net472\System.Buffers.dll

@@ -228,8 +228,6 @@ C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\win-x64\MyBlogs.Gen
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\win-x64\MyBlogs.AssemblyInfoInputs.cache
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\win-x64\MyBlogs.AssemblyInfo.cs
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\win-x64\MyBlogs.csproj.CoreCompileInputs.cache
-C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\win-x64\MyBlogs.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\win-x64\MyBlogs.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\win-x64\MyBlogs.sourcelink.json
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\win-x64\staticwebassets.build.json
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\win-x64\staticwebassets.development.json
@@ -245,3 +243,7 @@ C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\win-x64\refint\MyBl
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\win-x64\MyBlogs.pdb
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\win-x64\MyBlogs.genruntimeconfig.cache
 C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\win-x64\ref\MyBlogs.dll
+C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\Microsoft.Extensions.Hosting.WindowsServices.dll
+C:\Users\abc\source\repos\MyBlogs\MyBlogs\bin\Release\net8.0\win-x64\System.ServiceProcess.ServiceController.dll
+C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\win-x64\MyBlogs.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\abc\source\repos\MyBlogs\MyBlogs\obj\Release\net8.0\win-x64\MyBlogs.MvcApplicationPartsAssemblyInfo.cache

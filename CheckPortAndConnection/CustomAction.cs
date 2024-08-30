@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Net.Sockets;
 using System.Net;
 using WixToolset.Dtf.WindowsInstaller;
+using System.Web.NBitcoin;
 
 namespace CheckPortAndConnection
 {
@@ -11,7 +12,7 @@ namespace CheckPortAndConnection
         [CustomAction]
         public static ActionResult ValidatePortAndConnection(Session session)
         {
-            string portNumber = session["PORTNUMBER"];
+            string portNumber = session["HTTPPORT"];
             string connectionString = session["CONNECTIONSTRING"];
 
             string validationResult = "Validation successful!";
@@ -35,6 +36,16 @@ namespace CheckPortAndConnection
             }
 
             session["VALIDATIONRESULT"] = validationResult;
+            session["ENCODEDCONNECTIONSTRING"] = HttpUtility.UrlEncode(connectionString);
+
+            // setting exit msg
+            string hostname = session["HOSTNAME"];
+            if (string.IsNullOrEmpty(hostname) || hostname == "example.io")
+            {
+                hostname = "localhost";
+            }
+            session["WIXUI_EXITDIALOGOPTIONALTEXT"] = "Visit to Site : http://" + hostname + ":" + session["HTTPPORT"] + "/index.html";
+
             session.Log(validationResult);
             return ActionResult.Success;
         }
