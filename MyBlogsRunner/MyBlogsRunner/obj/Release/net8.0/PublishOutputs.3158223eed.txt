@@ -1,0 +1,6 @@
+C:\Users\abc\source\repos\MyBlogs\MyBlogs\publish\MyBlogsRunner.exe
+C:\Users\abc\source\repos\MyBlogs\MyBlogs\publish\MyBlogsRunner.dll
+C:\Users\abc\source\repos\MyBlogs\MyBlogs\publish\MyBlogsRunner.deps.json
+C:\Users\abc\source\repos\MyBlogs\MyBlogs\publish\MyBlogsRunner.runtimeconfig.json
+C:\Users\abc\source\repos\MyBlogs\MyBlogs\publish\MyBlogsRunner.pdb
+C:\Users\abc\source\repos\MyBlogs\MyBlogs\publish\Newtonsoft.Json.dll

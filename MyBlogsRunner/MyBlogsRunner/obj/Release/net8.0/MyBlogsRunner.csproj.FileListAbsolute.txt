@@ -1,0 +1,17 @@
+C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\bin\Release\net8.0\MyBlogsRunner.exe
+C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\bin\Release\net8.0\MyBlogsRunner.deps.json
+C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\bin\Release\net8.0\MyBlogsRunner.runtimeconfig.json
+C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\bin\Release\net8.0\MyBlogsRunner.dll
+C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\bin\Release\net8.0\MyBlogsRunner.pdb
+C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\obj\Release\net8.0\MyBlogsRunner.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\obj\Release\net8.0\MyBlogsRunner.AssemblyInfoInputs.cache
+C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\obj\Release\net8.0\MyBlogsRunner.AssemblyInfo.cs
+C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\obj\Release\net8.0\MyBlogsRunner.csproj.CoreCompileInputs.cache
+C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\obj\Release\net8.0\MyBlogsRunner.dll
+C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\obj\Release\net8.0\refint\MyBlogsRunner.dll
+C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\obj\Release\net8.0\MyBlogsRunner.pdb
+C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\obj\Release\net8.0\MyBlogsRunner.genruntimeconfig.cache
+C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\obj\Release\net8.0\ref\MyBlogsRunner.dll
+C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\bin\Release\net8.0\Newtonsoft.Json.dll
+C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\obj\Release\net8.0\MyBlogsRunner.csproj.AssemblyReference.cache
+C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\obj\Release\net8.0\MyBlogsR.B7F92562.Up2Date
