@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{6801105B-0DF0-4EF9-B794-2D1F270D08D0}|MyBlogs_SetUp\\MyBlogs_SetUp.wixproj|solutionrelative:myblogs_setup\\product.wxs||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{062CFCF5-613D-4CEB-AF30-5FFA1C0704DF}|..\\MyBlogsRunner\\MyBlogsRunner\\MyBlogsRunner.csproj|c:\\users\\abc\\source\\repos\\myblogsrunner\\myblogsrunner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\abc\\source\\repos\\myblogsrunner\\myblogsrunner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,14 +27,13 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\abc\\source\\repos\\MyBlogsRunner\\MyBlogsRunner\\Program.cs",
-              "RelativeDocumentMoniker": "..\\MyBlogsRunner\\MyBlogsRunner\\Program.cs",
-              "ToolTip": "C:\\Users\\abc\\source\\repos\\MyBlogsRunner\\MyBlogsRunner\\Program.cs",
-              "RelativeToolTip": "..\\MyBlogsRunner\\MyBlogsRunner\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogsRunner\\MyBlogsRunner\\Program.cs",
+              "RelativeDocumentMoniker": "MyBlogsRunner\\MyBlogsRunner\\Program.cs",
+              "ToolTip": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogsRunner\\MyBlogsRunner\\Program.cs",
+              "RelativeToolTip": "MyBlogsRunner\\MyBlogsRunner\\Program.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAYwD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T07:11:45.801Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-04T07:11:45.801Z"
             },
             {
               "$type": "Document",
@@ -44,7 +43,7 @@
               "RelativeDocumentMoniker": "MyBlogs_SetUp\\Components.wxs",
               "ToolTip": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogs_SetUp\\Components.wxs",
               "RelativeToolTip": "MyBlogs_SetUp\\Components.wxs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "71fa8cad-8471-402b-834a-c68922df4385.000080|",
               "WhenOpened": "2024-09-04T06:56:58.413Z",
               "EditorCaption": ""
@@ -59,8 +58,7 @@
               "RelativeToolTip": "MyBlogs_SetUp\\Product.wxs",
               "ViewState": "AgIAAA4AAAAAAAAAAADwvzIAAAArAAAAAAAAAA==",
               "Icon": "71fa8cad-8471-402b-834a-c68922df4385.000080|",
-              "WhenOpened": "2024-09-03T11:34:39.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-03T11:34:39.646Z"
             }
           ]
         },

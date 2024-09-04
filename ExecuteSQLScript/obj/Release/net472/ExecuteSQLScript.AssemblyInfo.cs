@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExecuteSQLScript")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f495030293a22c8aa4f3fa7a47d6da9f0b7e0fe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9bc92a5cb906b874a2583d8c944e971eefa51202")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExecuteSQLScript")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExecuteSQLScript")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

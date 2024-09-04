@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/1XrXlXY3yU=",
+  "dgSpecHash": "+OO099jGUTg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\abc\\source\\repos\\MyBlogsRunner\\MyBlogsRunner\\MyBlogsRunner.csproj",
+  "projectFilePath": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogsRunner\\MyBlogsRunner\\MyBlogsRunner.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abc\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],

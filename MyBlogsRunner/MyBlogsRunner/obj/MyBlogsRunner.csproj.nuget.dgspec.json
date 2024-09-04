@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abc\\source\\repos\\MyBlogsRunner\\MyBlogsRunner\\MyBlogsRunner.csproj": {}
+    "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogsRunner\\MyBlogsRunner\\MyBlogsRunner.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abc\\source\\repos\\MyBlogsRunner\\MyBlogsRunner\\MyBlogsRunner.csproj": {
+    "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogsRunner\\MyBlogsRunner\\MyBlogsRunner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abc\\source\\repos\\MyBlogsRunner\\MyBlogsRunner\\MyBlogsRunner.csproj",
+        "projectUniqueName": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogsRunner\\MyBlogsRunner\\MyBlogsRunner.csproj",
         "projectName": "MyBlogsRunner",
-        "projectPath": "C:\\Users\\abc\\source\\repos\\MyBlogsRunner\\MyBlogsRunner\\MyBlogsRunner.csproj",
+        "projectPath": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogsRunner\\MyBlogsRunner\\MyBlogsRunner.csproj",
         "packagesPath": "C:\\Users\\abc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abc\\source\\repos\\MyBlogsRunner\\MyBlogsRunner\\obj\\",
+        "outputPath": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogsRunner\\MyBlogsRunner\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\abc\\AppData\\Roaming\\NuGet\\NuGet.Config",

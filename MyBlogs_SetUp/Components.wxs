@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
 	<Fragment>
-		
+
 		<!-- Define the component group -->
 		<ComponentGroup Id="ProductComponents">
 			<ComponentRef Id="StartMenuShortcutComponent"/>
 			<ComponentRef Id="DesktopShortcutComponent"/>
+			<ComponentRef Id="RegistryStartupComponent"/>
 		</ComponentGroup>
 
 		<Directory Id="ProgramMenuFolder" Name="ProgramMenu">
 			<Directory Id="ApplicationProgramsFolder" Name="!(loc.ProductName)"/>
 		</Directory>
-		
 
 		<!-- Define the Start Menu shortcut component -->
 		<DirectoryRef Id="ApplicationProgramsFolder">
 			<Component Id="StartMenuShortcutComponent" Guid="{971A06A3-705A-4FC2-B3C3-94A197D918C6}">
-				<Shortcut Id="StartMenuShortcut"
+				<Shortcut Id="StartMenuShortcut" 
                           Name="MyBlogs"
                           Description="My Application Description"
                           Target="[INSTALLFOLDER]MyBlogsRunner.exe"
@@ -44,5 +44,29 @@
 				<RegistryValue Root="HKCU" Key="Software\$(loc.ProductNameFolder)" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
 			</Component>
 		</DirectoryRef>
+
+		<!-- Define the Startup Folder shortcut component 
+		<DirectoryRef Id="StartupFolder">
+			<Component Id="StartupShortcutComponent" Guid="{5F4B7E7E-7B1B-4F65-AB24-8DB2E1B6C471}">
+				<Shortcut Id="StartupShortcut"
+                          Name="MyBlogs"
+                          Description="My Application Description"
+                          Target="[INSTALLFOLDER]MyBlogsRunner.exe"
+						  Icon="icon.ico"
+                          WorkingDirectory="INSTALLFOLDER"/>-->
+				<!-- Remove the Startup folder shortcut on uninstall 
+				<RemoveFolder Id="RemoveStartupShortcut" Directory="StartupFolder" On="uninstall"/>
+				Registry key to mark the application as installed 
+				<RegistryValue Root="HKCU" Key="Software\$(loc.ProductNameFolder)" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+			</Component>
+		</DirectoryRef>-->
+
+		<!-- Define the Registry key for startup -->
+		<Component Id="RegistryStartupComponent" Guid="{EBAA4B2C-20EF-4A7D-96EF-3E2B4A1A5C2E}">
+			<RegistryKey Root="HKCU" Key="Software\Microsoft\Windows\CurrentVersion\Run">
+				<RegistryValue Name="MyBlogs" Value="[INSTALLFOLDER]MyBlogsRunner.exe" Type="string" KeyPath="yes"/>
+			</RegistryKey>
+		</Component>
+
 	</Fragment>
 </Wix>

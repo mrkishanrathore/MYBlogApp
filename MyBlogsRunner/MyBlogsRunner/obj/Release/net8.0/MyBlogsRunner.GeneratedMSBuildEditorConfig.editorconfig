@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MyBlogsRunner
-build_property.ProjectDir = C:\Users\abc\source\repos\MyBlogsRunner\MyBlogsRunner\
+build_property.ProjectDir = C:\Users\abc\source\repos\MyBlogs\MyBlogsRunner\MyBlogsRunner\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
