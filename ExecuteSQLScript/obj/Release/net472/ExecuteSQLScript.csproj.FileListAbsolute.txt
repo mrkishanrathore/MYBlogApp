@@ -1,0 +1,15 @@
+C:\Users\abc\source\repos\MyBlogs\ExecuteSQLScript\bin\Release\net472\CustomAction.config
+C:\Users\abc\source\repos\MyBlogs\ExecuteSQLScript\bin\Release\net472\ExecuteSQLScript.dll
+C:\Users\abc\source\repos\MyBlogs\ExecuteSQLScript\bin\Release\net472\ExecuteSQLScript.CA.dll
+C:\Users\abc\source\repos\MyBlogs\ExecuteSQLScript\bin\Release\net472\ExecuteSQLScript.pdb
+C:\Users\abc\source\repos\MyBlogs\ExecuteSQLScript\bin\Release\net472\WixToolset.Dtf.WindowsInstaller.dll
+C:\Users\abc\source\repos\MyBlogs\ExecuteSQLScript\obj\Release\net472\ExecuteSQLScript.csproj.AssemblyReference.cache
+C:\Users\abc\source\repos\MyBlogs\ExecuteSQLScript\obj\Release\net472\ExecuteSQLScript.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abc\source\repos\MyBlogs\ExecuteSQLScript\obj\Release\net472\ExecuteSQLScript.AssemblyInfoInputs.cache
+C:\Users\abc\source\repos\MyBlogs\ExecuteSQLScript\obj\Release\net472\ExecuteSQLScript.AssemblyInfo.cs
+C:\Users\abc\source\repos\MyBlogs\ExecuteSQLScript\obj\Release\net472\ExecuteSQLScript.csproj.CoreCompileInputs.cache
+C:\Users\abc\source\repos\MyBlogs\ExecuteSQLScript\obj\Release\net472\ExecuteSQLScript.sourcelink.json
+C:\Users\abc\source\repos\MyBlogs\ExecuteSQLScript\obj\Release\net472\ExecuteSQLScript.CA.rsp
+C:\Users\abc\source\repos\MyBlogs\ExecuteSQLScript\obj\Release\net472\ExecuteS.CF0F6B54.Up2Date
+C:\Users\abc\source\repos\MyBlogs\ExecuteSQLScript\obj\Release\net472\ExecuteSQLScript.dll
+C:\Users\abc\source\repos\MyBlogs\ExecuteSQLScript\obj\Release\net472\ExecuteSQLScript.pdb

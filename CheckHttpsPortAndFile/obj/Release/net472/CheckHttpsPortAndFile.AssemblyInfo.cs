@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CheckHttpsPortAndFile")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3866fbc3183d1c1a817bf469f35a4780c90a7cdf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f495030293a22c8aa4f3fa7a47d6da9f0b7e0fe")]
 [assembly: System.Reflection.AssemblyProductAttribute("CheckHttpsPortAndFile")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CheckHttpsPortAndFile")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

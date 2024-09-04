@@ -32,6 +32,7 @@
 		<Property Id="HTTPSPORT" Value="443" />
 		<Property Id="VALIDATIONRESULT" Value="Unknown" />
 		<Property Id="INSTALLDIR" Value="C:\Program Files\MyBlogs" />
+		<Property Id="SQLSCRIPTPATH" Value="C:\Program Files\MyBlogs\SqlScript\SQL_Script.sql" />
 		<Property Id="ENABLEHTTPS" Value="1" />
 		<Property Id="HOSTNAME" Value="example.io" />
 		<Property Id="VALIDATIONRESULT2" Value="0" />
@@ -47,28 +48,47 @@
 		<!-- Components to Add-->
 		<Feature Id="ProductFeature" Title="MyBlogs_SetUp" Level="1">
 			<ComponentGroupRef Id="PublishedComponents" />
+			<ComponentGroupRef Id="ProductComponents" />
 		</Feature>
+		
 
 		<!-- Define the binary for the custom action DLL -->
 		<Binary Id="CheckPortConn" SourceFile="$(var.CheckPortAndConnection.TargetDir)$(var.CheckPortAndConnection.TargetName).CA.dll" />
 		<Binary Id="CheckHttpsPortFile" SourceFile="$(var.CheckHttpsPortAndFile.TargetDir)$(var.CheckHttpsPortAndFile.TargetName).CA.dll" />
+		<Binary Id="ExecuteSQLScript" SourceFile="$(var.ExecuteSQLScript.TargetDir)$(var.ExecuteSQLScript.TargetName).CA.dll" />
 		<Binary Id="UpdateAppSettingsJson" SourceFile="$(var.UpdateAppSettings.TargetDir)$(var.UpdateAppSettings.TargetName).CA.dll" />
 
 		<!-- Define Custom Actions -->
+		<!-- Before Installation -->
+		<CustomAction Id="PrintLicense" ExeCommand="" Property="ValidatePortAndConnection" Execute="immediate" Return="check" />
 		<CustomAction Id="CheckPortSQLConnection" BinaryRef="CheckPortConn" DllEntry="ValidatePortAndConnection" Execute="immediate" />
 		<CustomAction Id="CheckHttpsPortCertLoc" BinaryRef="CheckHttpsPortFile" DllEntry="CheckHttpsPort_CertFile" Execute="immediate" />
+		
+		<!-- After Installation -->
 		<CustomAction Id="SetCustomActionData" Property="UpdateAppSettings"
-              Value="INSTALLDIR=[INSTALLFOLDER];HTTPPORT=[HTTPPORT];HTTPSPORT=[HTTPSPORT];CONNECTIONSTRING=[ENCODEDCONNECTIONSTRING];CERTPATH=[CERTPATH];CERTPASSWORD=[CERTPASSWORD];HOSTNAME=[HOSTNAME];ENABLEHTTPS=[ENABLEHTTPS];" />
+              Value="INSTALLDIR=[INSTALLFOLDER];HTTPPORT=[HTTPPORT];HTTPSPORT=[HTTPSPORT];CONNECTIONSTRING=[ENCODEDCONNECTIONSTRING];CERTPATH=[CERTPATH];CERTPASSWORD=[CERTPASSWORD];HOSTNAME=[HOSTNAME];ENABLEHTTPS=[ENABLEHTTPS];SQLSCRIPTPATH=[SQLSCRIPTPATH];" />
+		
+		<CustomAction Id="SetDataForSqlScrript" Property="ExecuteSQLScript"
+              Value="CONNECTIONSTRING=[ENCODEDCONNECTIONSTRING];SQLSCRIPTPATH=[SQLSCRIPTPATH];" />
 		<CustomAction Id="UpdateAppSettings" BinaryRef="UpdateAppSettingsJson" DllEntry="UpdateAppSettings" Execute="deferred" Impersonate="no"/>
-		<CustomAction Id="PrintLicense" ExeCommand="" Property="ValidatePortAndConnection" Execute="immediate" Return="check" />
-		
-		
+		<CustomAction Id="ExecuteSQLScript" BinaryRef="ExecuteSQLScript" DllEntry="ExecuteSQLScript" Execute="deferred" />
+		<CustomAction Id="EXECUTE_AFTER_FINALIZE"
+              Execute="immediate"
+              Impersonate="no"
+              Return="asyncNoWait"
+              FileRef="MyBlogs.exe"
+              ExeCommand="" />
+
+
 		<!-- Custom Action Sequence -->
 		<InstallExecuteSequence>
 			<Custom Action="CheckPortSQLConnection" Before="InstallInitialize"/>
 			<Custom Action="CheckHttpsPortCertLoc" Before="InstallInitialize"/>
+			<Custom Action="SetDataForSqlScrript" Before="ExecuteSQLScript"/>
+			<Custom Action="ExecuteSQLScript" After="InstallFiles"/>
 			<Custom Action="SetCustomActionData" Before="UpdateAppSettings"/>
 			<Custom Action="UpdateAppSettings" After="InstallFiles"/>
+			<Custom Action="EXECUTE_AFTER_FINALIZE" After="InstallFinalize" Condition="NOT Installed" />
 		</InstallExecuteSequence>
 		
 		
@@ -76,4 +96,4 @@
 
 </Wix>
 
-<!-- msiexec /i "MyBlogs-Installer-1.2.0.0-Release-x64.msi" /l* "Mylogfile.log"-->
+<!-- msiexec /i "MyBlogs-Installer-1.3.0.0-Release-x64.msi" /l* "Mylogfile.log"-->

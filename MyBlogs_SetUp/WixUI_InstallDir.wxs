@@ -37,10 +37,10 @@
 
 			<!-- Dialog for Http Port and Connection String-->
 			<Dialog Id="PortAndConnectionDlg" Width="370" Height="270" Title="MyBlogs Custom Installation Options">
-				<Control Id="PathText" Type="Text" X="15" Y="15" Width="200" Height="15" Text="Connection String :" />
+				<Control Id="PathText" Type="Text" X="15" Y="15" Width="200" Height="15" Text="SQl Server DataBase Connection String :" />
 				<Control Id="PathEdit" Type="Edit" X="15" Y="30" Width="340" Height="18" Property="CONNECTIONSTRING" />
 				
-				<Control Id="PortText" Type="Text" X="15" Y="60" Width="200" Height="15" Text="Port Number :" />
+				<Control Id="PortText" Type="Text" X="15" Y="60" Width="200" Height="15" Text="HTTP Port Number :" />
 				<Control Id="PortEdit" Type="Edit" X="15" Y="75" Width="340" Height="18" Property="HTTPPORT" />
 				
 				<Control Id="HostNameText" Type="Text" X="15" Y="105" Width="200" Height="15" Text="Host/Domain Name :" />
@@ -65,13 +65,13 @@
 
 			<!-- Dialog for Https Port and Certificate Details -->
 			<Dialog Id="HttpsDlg" Width="370" Height="270" Title="HTTPS Configuration">
-				<Control Id="HTTPS_PORT_LABEL" Type="Text" X="15" Y="15" Width="290" Height="15" Text="HTTPS Port:" />
+				<Control Id="HTTPS_PORT_LABEL" Type="Text" X="15" Y="15" Width="290" Height="15" Text="HTTPS Port :" />
 				<Control Id="HTTPS_PORT" Type="Edit" X="15" Y="30" Width="340" Height="18" Property="HTTPSPORT" Disabled="yes"/>
 
-				<Control Id="CERT_LOC_LABEL" Type="Text" X="15" Y="55" Width="290" Height="15" Text="Certificate Location:" />
+				<Control Id="CERT_LOC_LABEL" Type="Text" X="15" Y="55" Width="290" Height="15" Text="SSL Certificate Location :" />
 				<Control Id="CERT_LOC" Type="Edit" X="15" Y="70" Width="340" Height="18" Property="CERTPATH" />
 
-				<Control Id="CERT_PASS_LABEL" Type="Text" X="15" Y="95" Width="290" Height="15" Text="Certificate Password:" />
+				<Control Id="CERT_PASS_LABEL" Type="Text" X="15" Y="95" Width="290" Height="15" Text="SSL Certificate Password :" />
 				<Control Id="CERT_PASS" Type="Edit" X="15" Y="110" Width="340" Height="18" Property="CERTPASSWORD" Password="yes"/>
 
 				<Control Id="CheckHTTPSPORT_File" Type="PushButton" X="245" Y="240" Width="56" Height="17" Text="Check"  Default="yes">

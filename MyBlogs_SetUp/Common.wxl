@@ -9,8 +9,8 @@
 	<String Id="ProductNameFolder" Value="MyBlogs" />
 	<String Id="ProductName" Value="MyBlogs" />
 
-	<String Id="ProductName_x86" Value="WixSetupMyBlogs (32bit)" />
-	<String Id="ProductName_x64" Value="WixSetupMyBlogs (64bit)" />
+	<String Id="ProductName_x86" Value="MyBlogs (32bit)" />
+	<String Id="ProductName_x64" Value="MyBlogs (64bit)" />
 
 	<String Id="DowngradeErrorMessage" Value="A newer version of WebSite is already installed." />
 

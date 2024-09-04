@@ -111,6 +111,26 @@ $(document).ready(function () {
         }
     });
 
+    // Handle restart server
+    $("#Restart").click(function (e) {
+        console.log("Restart");
+        $.ajax({
+            type: "POST",
+            url: `${EndPoint}/Restart`,
+            data: JSON.stringify(""),
+            dataType: "json",
+            contentType: "application/json",
+            success: function (response) {
+                console.log(response);
+            },
+            error: function (xhr) {
+                handleAjaxError(xhr);
+            }
+        });
+
+            
+    });
+
     // Handle Login Submit
     $("#submitLogin").click(function (e) {
         e.preventDefault();

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<Fragment>
+		
+		<!-- Define the component group -->
+		<ComponentGroup Id="ProductComponents">
+			<ComponentRef Id="StartMenuShortcutComponent"/>
+			<ComponentRef Id="DesktopShortcutComponent"/>
+		</ComponentGroup>
+
+		<Directory Id="ProgramMenuFolder" Name="ProgramMenu">
+			<Directory Id="ApplicationProgramsFolder" Name="!(loc.ProductName)"/>
+		</Directory>
+		
+
+		<!-- Define the Start Menu shortcut component -->
+		<DirectoryRef Id="ApplicationProgramsFolder">
+			<Component Id="StartMenuShortcutComponent" Guid="{971A06A3-705A-4FC2-B3C3-94A197D918C6}">
+				<Shortcut Id="StartMenuShortcut"
+                          Name="MyBlogs"
+                          Description="My Application Description"
+                          Target="[INSTALLFOLDER]MyBlogsRunner.exe"
+						  Icon="icon.ico"
+                          WorkingDirectory="INSTALLFOLDER"/>
+				<!-- Remove the Start Menu shortcut folder on uninstall -->
+				<RemoveFolder Id="RemoveStartMenuShortcut" Directory="ApplicationProgramsFolder" On="uninstall"/>
+				<!-- Registry key to mark the application as installed -->
+				<RegistryValue Root="HKCU" Key="Software\$(loc.ProductNameFolder)" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+			</Component>
+		</DirectoryRef>
+
+		<!-- Define the desktop shortcut component -->
+		<DirectoryRef Id="DesktopFolder">
+			<Component Id="DesktopShortcutComponent" Guid="{67B057AA-5735-41DD-90CC-D7DDED865CB1}">
+				<Shortcut Id="DesktopShortcut"
+                          Name="MyBlogs"
+                          Description="My Application Description"
+                          Target="[INSTALLFOLDER]MyBlogsRunner.exe"
+						  Icon="icon.ico"
+                          WorkingDirectory="INSTALLFOLDER"/>
+				<!-- Remove the desktop shortcut folder on uninstall -->
+				<RemoveFolder Id="RemoveDesktopShortcut" Directory="DesktopFolder" On="uninstall"/>
+				<!-- Registry key to mark the application as installed -->
+				<RegistryValue Root="HKCU" Key="Software\$(loc.ProductNameFolder)" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+			</Component>
+		</DirectoryRef>
+	</Fragment>
+</Wix>

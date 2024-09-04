@@ -2,8 +2,9 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Web.NBitcoin;
-using Newtonsoft.Json.Linq;
+using System.Linq;
 using WixToolset.Dtf.WindowsInstaller;
+using Newtonsoft.Json.Linq;
 
 namespace UpdateAppSettings
 {
@@ -24,6 +25,7 @@ namespace UpdateAppSettings
                 string certPassword = session.CustomActionData["CERTPASSWORD"];
                 string hostName = session.CustomActionData["HOSTNAME"];
                 string enableHttps = session.CustomActionData["ENABLEHTTPS"];
+
                 if (hostName == "example.io")
                 {
                     hostName = "";
@@ -59,7 +61,7 @@ namespace UpdateAppSettings
 
                 if (jsonObject["Kestrel"] != null)
                 {
-                    if(enableHttps == "1")
+                    if (enableHttps == "1")
                     {
                         jsonObject["Kestrel"]["HttpsPort"] = int.Parse(httpsPort);
                         jsonObject["Kestrel"]["CertPath"] = certPath;
@@ -73,7 +75,6 @@ namespace UpdateAppSettings
                     }
                     jsonObject["Kestrel"]["HttpPort"] = int.Parse(httpPort);
                     jsonObject["Kestrel"]["HostName"] = hostName;
-
                 }
 
                 // Write the updated JSON back to the file
@@ -81,25 +82,17 @@ namespace UpdateAppSettings
 
                 session.Log("Successfully updated appsettings.json.");
 
-                string exePath = Path.Combine(installDir, "MyBlogs.exe");
-                if (File.Exists(exePath))
-                {
-                    Process.Start(exePath);
-                    session.Log($"Executed {exePath}.");
-                }
-                else
-                {
-                    session.Log($"Error: MyBlogs.exe not found at {exePath}.");
-                }
-
+                
 
                 return ActionResult.Success;
             }
             catch (Exception ex)
             {
-                session.Log("Error: " + ex.Message+" by kishan");
+                session.Log("Error: " + ex.Message);
                 return ActionResult.Success;
             }
         }
+
+
     }
 }

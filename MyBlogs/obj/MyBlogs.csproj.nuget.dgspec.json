@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogs\\MyBlogs.csproj": {
-      "version": "1.2.0",
+      "version": "1.3.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogs\\MyBlogs.csproj",
         "projectName": "MyBlogs",
@@ -46,6 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Cake.Powershell": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[8.0.7, )"
@@ -75,6 +79,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
+            },
+            "System.Diagnostics.PerformanceCounter": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
