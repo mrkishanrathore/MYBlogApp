@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\abc\\source\\repos\\MyBlogs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6801105B-0DF0-4EF9-B794-2D1F270D08D0}|MyBlogs_SetUp\\MyBlogs_SetUp.wixproj|c:\\users\\abc\\source\\repos\\myblogs\\myblogs_setup\\components.wxs||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{6801105B-0DF0-4EF9-B794-2D1F270D08D0}|MyBlogs_SetUp\\MyBlogs_SetUp.wixproj|solutionrelative:myblogs_setup\\components.wxs||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{6801105B-0DF0-4EF9-B794-2D1F270D08D0}|MyBlogs_SetUp\\MyBlogs_SetUp.wixproj|c:\\users\\abc\\source\\repos\\myblogs\\myblogs_setup\\componentsgenerated.wxs||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{6801105B-0DF0-4EF9-B794-2D1F270D08D0}|MyBlogs_SetUp\\MyBlogs_SetUp.wixproj|solutionrelative:myblogs_setup\\componentsgenerated.wxs||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F360AD0-9BCD-497A-9C97-9C41A783A009}|ExecuteSQLScript\\ExecuteSQLScript.csproj|c:\\users\\abc\\source\\repos\\myblogs\\executesqlscript\\customaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F360AD0-9BCD-497A-9C97-9C41A783A009}|ExecuteSQLScript\\ExecuteSQLScript.csproj|solutionrelative:executesqlscript\\customaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFBDA6E1-BC52-4599-A318-2667F8711448}|MyBlogs\\MyBlogs.csproj|c:\\users\\abc\\source\\repos\\myblogs\\myblogs\\publish\\sqlscript\\sql_script.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{CFBDA6E1-BC52-4599-A318-2667F8711448}|MyBlogs\\MyBlogs.csproj|solutionrelative:myblogs\\publish\\sqlscript\\sql_script.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6801105B-0DF0-4EF9-B794-2D1F270D08D0}|MyBlogs_SetUp\\MyBlogs_SetUp.wixproj|c:\\users\\abc\\source\\repos\\myblogs\\myblogs_setup\\product.wxs||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{6801105B-0DF0-4EF9-B794-2D1F270D08D0}|MyBlogs_SetUp\\MyBlogs_SetUp.wixproj|solutionrelative:myblogs_setup\\product.wxs||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6801105B-0DF0-4EF9-B794-2D1F270D08D0}|MyBlogs_SetUp\\MyBlogs_SetUp.wixproj|c:\\users\\abc\\source\\repos\\myblogs\\myblogs_setup\\components.wxs||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{6801105B-0DF0-4EF9-B794-2D1F270D08D0}|MyBlogs_SetUp\\MyBlogs_SetUp.wixproj|solutionrelative:myblogs_setup\\components.wxs||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\abc\\source\\repos\\myblogsrunner\\myblogsrunner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -21,11 +33,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ComponentsGenerated.wxs",
+              "DocumentMoniker": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogs_SetUp\\ComponentsGenerated.wxs",
+              "RelativeDocumentMoniker": "MyBlogs_SetUp\\ComponentsGenerated.wxs",
+              "ToolTip": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogs_SetUp\\ComponentsGenerated.wxs",
+              "RelativeToolTip": "MyBlogs_SetUp\\ComponentsGenerated.wxs",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAkwM0AAAAlAAAAAAAAAA==",
+              "Icon": "71fa8cad-8471-402b-834a-c68922df4385.000080|",
+              "WhenOpened": "2024-09-05T04:56:29.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomAction.cs",
+              "DocumentMoniker": "C:\\Users\\abc\\source\\repos\\MyBlogs\\ExecuteSQLScript\\CustomAction.cs",
+              "RelativeDocumentMoniker": "ExecuteSQLScript\\CustomAction.cs",
+              "ToolTip": "C:\\Users\\abc\\source\\repos\\MyBlogs\\ExecuteSQLScript\\CustomAction.cs",
+              "RelativeToolTip": "ExecuteSQLScript\\CustomAction.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T12:54:08.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "SQL_Script.sql",
+              "DocumentMoniker": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogs\\publish\\SqlScript\\SQL_Script.sql",
+              "RelativeDocumentMoniker": "MyBlogs\\publish\\SqlScript\\SQL_Script.sql",
+              "ToolTip": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogs\\publish\\SqlScript\\SQL_Script.sql",
+              "RelativeToolTip": "MyBlogs\\publish\\SqlScript\\SQL_Script.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-09-04T12:21:15.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogsRunner\\MyBlogsRunner\\Program.cs",
               "RelativeDocumentMoniker": "MyBlogsRunner\\MyBlogsRunner\\Program.cs",
@@ -37,26 +86,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Components.wxs",
               "DocumentMoniker": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogs_SetUp\\Components.wxs",
               "RelativeDocumentMoniker": "MyBlogs_SetUp\\Components.wxs",
               "ToolTip": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogs_SetUp\\Components.wxs",
               "RelativeToolTip": "MyBlogs_SetUp\\Components.wxs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "71fa8cad-8471-402b-834a-c68922df4385.000080|",
-              "WhenOpened": "2024-09-04T06:56:58.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-04T06:56:58.413Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Product.wxs",
               "DocumentMoniker": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogs_SetUp\\Product.wxs",
               "RelativeDocumentMoniker": "MyBlogs_SetUp\\Product.wxs",
               "ToolTip": "C:\\Users\\abc\\source\\repos\\MyBlogs\\MyBlogs_SetUp\\Product.wxs",
               "RelativeToolTip": "MyBlogs_SetUp\\Product.wxs",
-              "ViewState": "AgIAAA4AAAAAAAAAAADwvzIAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAADwv2IAAAAFAAAAAAAAAA==",
               "Icon": "71fa8cad-8471-402b-834a-c68922df4385.000080|",
               "WhenOpened": "2024-09-03T11:34:39.646Z"
             }

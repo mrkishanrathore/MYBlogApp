@@ -188,7 +188,7 @@
                 <File Id="filgOyPzuZ6xbdIr867AxcY10Hu5FQ" KeyPath="yes" Source="$(var.BasePath)\MyBlogs.dll" />
             </Component>
             <Component Id="cmppo6I152C7gD6haIXrNhG91RrGwA" Guid="{6B1F55BF-F7D2-4057-AA75-12AAD2D87848}">
-                <File Id="MyBlogs.exe" KeyPath="yes" Source="$(var.BasePath)\MyBlogs.exe" />
+                <File Id="MyBlogsMain.exe" KeyPath="yes" Source="$(var.BasePath)\MyBlogs.exe" />
             </Component>
             <Component Id="cmp054hBHG4jWaZmZQDM7rZbMzwFTc" Guid="{ADD00B53-0D86-4668-9E1B-216E88092815}">
                 <File Id="fil68LBKlRy96q6PVXn7_eLktAOxfk" KeyPath="yes" Source="$(var.BasePath)\MyBlogs.pdb" />
@@ -203,7 +203,7 @@
                 <File Id="filButzCI.99GvzsIjcjGJetk1UDYI" KeyPath="yes" Source="$(var.BasePath)\MyBlogsRunner.dll" />
             </Component>
             <Component Id="cmpaLoDupsawWg5rS_IDRL6vfcpzNw" Guid="{3E5E54D8-E622-4884-8BC5-C074E71E0A3D}">
-                <File Id="filVZrCbbZA_CLD80YbX5qvLN4oPcU" KeyPath="yes" Source="$(var.BasePath)\MyBlogsRunner.exe" />
+                <File Id="MyBlogs.exe" KeyPath="yes" Source="$(var.BasePath)\MyBlogsRunner.exe" />
             </Component>
             <Component Id="cmpIkHws2qWnFQrWgsYSqrfAEwJnU4" Guid="{0ECD318F-2565-4586-AC60-648D7F1034C9}">
                 <File Id="filhNZVXcBOhvhLVZNfb3faNMaKxdc" KeyPath="yes" Source="$(var.BasePath)\MyBlogsRunner.pdb" />

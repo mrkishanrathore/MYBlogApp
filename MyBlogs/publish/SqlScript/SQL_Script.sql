@@ -1,20 +1,19 @@
--- Check if the DemoTable already exists, and drop it if it does
-IF OBJECT_ID('dbo.DemoTable', 'U') IS NOT NULL
-BEGIN
-    DROP TABLE dbo.DemoTable;
-END
+-- Create the demo database
+CREATE DATABASE DemoDB;
 
--- Create a new table called DemoTable
-CREATE TABLE dbo.DemoTable
-(
-    ID INT PRIMARY KEY IDENTITY(1,1),
+-- Switch to the new database
+USE DemoDB;
+
+-- Create a table named 'SampleData'
+CREATE TABLE SampleData (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
     Name NVARCHAR(50) NOT NULL,
     CreatedAt DATETIME DEFAULT GETDATE()
 );
 
--- Insert a single row into the table
-INSERT INTO dbo.DemoTable (Name)
-VALUES ('Test Entry');
+-- Insert some initial data into the table
+INSERT INTO SampleData (Name)
+VALUES ('Alice'),
+       ('Bob'),
+       ('Charlie');
 
--- Select data from the table to verify insertion
-SELECT * FROM dbo.DemoTable;
