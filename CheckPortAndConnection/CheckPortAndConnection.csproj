@@ -5,6 +5,7 @@
 
   <ItemGroup>
     <Content Include="CustomAction.config" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="SQL_Script.sql" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
   <ItemGroup>

@@ -17,3 +17,4 @@ C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\bin\Release\net472\Micr
 C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\bin\Release\net472\NBitcoin.dll
 C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\bin\Release\net472\Newtonsoft.Json.dll
 C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\bin\Release\net472\System.Buffers.dll
+C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\bin\Release\net472\SQL_Script.sql

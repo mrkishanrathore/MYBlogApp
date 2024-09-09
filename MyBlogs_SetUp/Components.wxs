@@ -9,9 +9,9 @@
 			<ComponentRef Id="RegistryStartupComponent"/>
 		</ComponentGroup>
 
-		<Directory Id="ProgramMenuFolder" Name="ProgramMenu">
+		<StandardDirectory Id="ProgramMenuFolder" >
 			<Directory Id="ApplicationProgramsFolder" Name="!(loc.ProductName)"/>
-		</Directory>
+		</StandardDirectory>
 
 		<!-- Define the Start Menu shortcut component -->
 		<DirectoryRef Id="ApplicationProgramsFolder">
@@ -30,7 +30,7 @@
 		</DirectoryRef>
 
 		<!-- Define the desktop shortcut component -->
-		<DirectoryRef Id="DesktopFolder">
+		<StandardDirectory Id="DesktopFolder">
 			<Component Id="DesktopShortcutComponent" Guid="{67B057AA-5735-41DD-90CC-D7DDED865CB1}">
 				<Shortcut Id="DesktopShortcut"
                           Name="MyBlogs"
@@ -43,7 +43,7 @@
 				<!-- Registry key to mark the application as installed -->
 				<RegistryValue Root="HKCU" Key="Software\$(loc.ProductNameFolder)" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
 			</Component>
-		</DirectoryRef>
+		</StandardDirectory>
 
 		<!-- Define the Startup Folder shortcut component 
 		<DirectoryRef Id="StartupFolder">
@@ -64,7 +64,7 @@
 		<!-- Define the Registry key for startup -->
 		<Component Id="RegistryStartupComponent" Guid="{EBAA4B2C-20EF-4A7D-96EF-3E2B4A1A5C2E}">
 			<RegistryKey Root="HKCU" Key="Software\Microsoft\Windows\CurrentVersion\Run">
-				<RegistryValue Name="MyBlogs" Value="[INSTALLFOLDER]MyBlogsRunner.exe" Type="string" KeyPath="yes"/>
+				<RegistryValue Name="!(loc.ProductName)" Value="[INSTALLFOLDER]MyBlogsRunner.exe" Type="string" KeyPath="yes"/>
 			</RegistryKey>
 		</Component>
 

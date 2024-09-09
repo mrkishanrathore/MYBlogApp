@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "l3ED9Zcpb+w=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\abc\\source\\repos\\MyBlogs\\DeleteDB\\DeleteDB.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\abc\\.nuget\\packages\\wixtoolset.dtf.customaction\\5.0.1\\wixtoolset.dtf.customaction.5.0.1.nupkg.sha512",
+    "C:\\Users\\abc\\.nuget\\packages\\wixtoolset.dtf.windowsinstaller\\5.0.1\\wixtoolset.dtf.windowsinstaller.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

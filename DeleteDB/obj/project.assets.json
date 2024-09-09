@@ -1,0 +1,136 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.7.2": {
+      "WixToolset.Dtf.CustomAction/5.0.1": {
+        "type": "package",
+        "dependencies": {
+          "WixToolset.Dtf.WindowsInstaller": "5.0.1"
+        },
+        "build": {
+          "build/WixToolset.Dtf.CustomAction.targets": {}
+        }
+      },
+      "WixToolset.Dtf.WindowsInstaller/5.0.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net20/WixToolset.Dtf.WindowsInstaller.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/WixToolset.Dtf.WindowsInstaller.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WixToolset.Dtf.CustomAction/5.0.1": {
+      "sha512": "ZgYHL5XOSKtxB/ImVt9lUYBLoKQcFTx67hs/YYrW0nI1nZBJGuNIUZQQvpGrcxmMDVx7e7ZLcabNww3eCJ9ahQ==",
+      "type": "package",
+      "path": "wixtoolset.dtf.customaction/5.0.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/WixToolset.Dtf.CustomAction.targets",
+        "tools/WixToolset.Dtf.Compression.Cab.dll",
+        "tools/WixToolset.Dtf.Compression.dll",
+        "tools/WixToolset.Dtf.MakeSfxCA.exe",
+        "tools/WixToolset.Dtf.MakeSfxCA.exe.config",
+        "tools/WixToolset.Dtf.Resources.dll",
+        "tools/arm64/SfxCA.dll",
+        "tools/x64/SfxCA.dll",
+        "tools/x86/SfxCA.dll",
+        "wix.png",
+        "wixtoolset.dtf.customaction.5.0.1.nupkg.sha512",
+        "wixtoolset.dtf.customaction.nuspec"
+      ]
+    },
+    "WixToolset.Dtf.WindowsInstaller/5.0.1": {
+      "sha512": "4KWorYkZLcHz3178oISI1a80CUKzQBgyVOcKDjuDBBUJGFdFWuFF0NDJFM7qVNQztDM0MEnCDEDi2iE1WbhGzg==",
+      "type": "package",
+      "path": "wixtoolset.dtf.windowsinstaller/5.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/WixToolset.Dtf.WindowsInstaller.dll",
+        "lib/net20/WixToolset.Dtf.WindowsInstaller.xml",
+        "lib/netstandard2.0/WixToolset.Dtf.WindowsInstaller.dll",
+        "lib/netstandard2.0/WixToolset.Dtf.WindowsInstaller.xml",
+        "wix.png",
+        "wixtoolset.dtf.windowsinstaller.5.0.1.nupkg.sha512",
+        "wixtoolset.dtf.windowsinstaller.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7.2": [
+      "WixToolset.Dtf.CustomAction >= 5.0.1",
+      "WixToolset.Dtf.WindowsInstaller >= 5.0.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\abc\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\abc\\source\\repos\\MyBlogs\\DeleteDB\\DeleteDB.csproj",
+      "projectName": "DeleteDB",
+      "projectPath": "C:\\Users\\abc\\source\\repos\\MyBlogs\\DeleteDB\\DeleteDB.csproj",
+      "packagesPath": "C:\\Users\\abc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\abc\\source\\repos\\MyBlogs\\DeleteDB\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\abc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net472"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net472": {
+        "targetAlias": "net472",
+        "dependencies": {
+          "WixToolset.Dtf.CustomAction": {
+            "target": "Package",
+            "version": "[5.0.1, )"
+          },
+          "WixToolset.Dtf.WindowsInstaller": {
+            "target": "Package",
+            "version": "[5.0.1, )"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

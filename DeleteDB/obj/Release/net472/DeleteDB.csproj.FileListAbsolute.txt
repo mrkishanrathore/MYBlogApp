@@ -1,0 +1,15 @@
+C:\Users\abc\source\repos\MyBlogs\DeleteDB\bin\Release\net472\CustomAction.config
+C:\Users\abc\source\repos\MyBlogs\DeleteDB\bin\Release\net472\DeleteDB.dll
+C:\Users\abc\source\repos\MyBlogs\DeleteDB\bin\Release\net472\DeleteDB.CA.dll
+C:\Users\abc\source\repos\MyBlogs\DeleteDB\bin\Release\net472\DeleteDB.pdb
+C:\Users\abc\source\repos\MyBlogs\DeleteDB\bin\Release\net472\WixToolset.Dtf.WindowsInstaller.dll
+C:\Users\abc\source\repos\MyBlogs\DeleteDB\obj\Release\net472\DeleteDB.csproj.AssemblyReference.cache
+C:\Users\abc\source\repos\MyBlogs\DeleteDB\obj\Release\net472\DeleteDB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abc\source\repos\MyBlogs\DeleteDB\obj\Release\net472\DeleteDB.AssemblyInfoInputs.cache
+C:\Users\abc\source\repos\MyBlogs\DeleteDB\obj\Release\net472\DeleteDB.AssemblyInfo.cs
+C:\Users\abc\source\repos\MyBlogs\DeleteDB\obj\Release\net472\DeleteDB.csproj.CoreCompileInputs.cache
+C:\Users\abc\source\repos\MyBlogs\DeleteDB\obj\Release\net472\DeleteDB.sourcelink.json
+C:\Users\abc\source\repos\MyBlogs\DeleteDB\obj\Release\net472\DeleteDB.CA.rsp
+C:\Users\abc\source\repos\MyBlogs\DeleteDB\obj\Release\net472\DeleteDB.csproj.Up2Date
+C:\Users\abc\source\repos\MyBlogs\DeleteDB\obj\Release\net472\DeleteDB.dll
+C:\Users\abc\source\repos\MyBlogs\DeleteDB\obj\Release\net472\DeleteDB.pdb

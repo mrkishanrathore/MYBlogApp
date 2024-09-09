@@ -399,6 +399,7 @@ Input	..\MyBlogs\publish\zh-Hant\System.Web.Services.Description.resources.dll
 Input	C:\Users\abc\.nuget\packages\wixtoolset.ui.wixext\5.0.1\wixext5\WixToolset.UI.wixext.dll
 Input	C:\Users\abc\source\repos\MyBlogs\CheckHttpsPortAndFile\bin\Release\net472\CheckHttpsPortAndFile.CA.dll
 Input	C:\Users\abc\source\repos\MyBlogs\CheckPortAndConnection\bin\Release\net472\CheckPortAndConnection.CA.dll
+Input	C:\Users\abc\source\repos\MyBlogs\DeleteDB\bin\Release\net472\DeleteDB.CA.dll
 Input	C:\Users\abc\source\repos\MyBlogs\ExecuteSQLScript\bin\Release\net472\ExecuteSQLScript.CA.dll
 Input	C:\Users\abc\source\repos\MyBlogs\MyBlogs_SetUp\\Assets\app.ico
 Input	C:\Users\abc\source\repos\MyBlogs\MyBlogs_SetUp\\Assets\Background.bmp

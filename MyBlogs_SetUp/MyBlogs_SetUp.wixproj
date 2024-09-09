@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CheckHttpsPortAndFile\CheckHttpsPortAndFile.csproj" />
     <ProjectReference Include="..\CheckPortAndConnection\CheckPortAndConnection.csproj" />
+    <ProjectReference Include="..\DeleteDB\DeleteDB.csproj" />
     <ProjectReference Include="..\ExecuteSQLScript\ExecuteSQLScript.csproj" />
     <ProjectReference Include="..\UpdateAppSettings\UpdateAppSettings.csproj" />
   </ItemGroup>
