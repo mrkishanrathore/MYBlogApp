@@ -11,6 +11,9 @@
     <DefineConstants>Debug</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="filter.xsl" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="WixToolset.Heat" Version="5.0.1" />
     <PackageReference Include="WixToolset.Util.wixext" Version="5.0.1" />
     <PackageReference Include="WixToolset.UI.wixext" Version="5.0.1" />
@@ -39,7 +42,9 @@
     </PropertyGroup>
     <!-- 
     <Exec Command="heat.exe dir ..\MyBlogs\bin\$(Configuration)\net8.0\win-$(Platform) -cg PublishedComponents -dr INSTALLFOLDER -gg -srd -sreg -var var.BasePath -o ComponentsGenerated.wxs" />
-    <HeatDirectory OutputFile="ComponentsGenerated.wxs" DirectoryRefId="INSTALLFOLDER" ComponentGroupName="PublishedComponents" SuppressCom="true" Directory="..\MyBlogs\publish" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" AutoGenerateGuids="false" GenerateGuidsNow="true" PreprocessorVariable="var.BasePath" />-->
+    <HeatDirectory OutputFile="ComponentsGenerated.wxs" DirectoryRefId="INSTALLFOLDER" ComponentGroupName="PublishedComponents" SuppressCom="true" Directory="..\MyBlogs\publish" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" 
+	AutoGenerateGuids="false" GenerateGuidsNow="true" PreprocessorVariable="var.BasePath" />-->
+    <HeatDirectory OutputFile="ComponentsGenerated.wxs" DirectoryRefId="INSTALLFOLDER" ComponentGroupName="PublishedComponents" SuppressCom="true" Directory="..\MyBlogs\publish" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" AutoGenerateGuids="false" GenerateGuidsNow="true" PreprocessorVariable="var.BasePath" Transforms="filter.xsl" />
   </Target>
   <Target Name="AfterBuild">
     <GetAssemblyIdentity AssemblyFiles="..\MyBlogs\publish\MyBlogs.dll">

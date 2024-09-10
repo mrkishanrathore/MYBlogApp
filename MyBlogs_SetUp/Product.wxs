@@ -56,6 +56,7 @@
 			<ComponentGroupRef Id="PublishedComponents" />
 			<ComponentGroupRef Id="ProductComponents" />
 			<ComponentGroupRef Id="RegistryComponentGroup" />
+			<ComponentGroupRef Id="MainAppRunner" />
 		</Feature>
 		
 
@@ -115,6 +116,16 @@
 				</RegistryKey>
 			</Component>
 		</ComponentGroup>
+
+		<ComponentGroup Id="MainAppRunner">
+			<ComponentRef Id="MyBlogsExeComponent"/>
+		</ComponentGroup>
+
+		<DirectoryRef Id="INSTALLFOLDER">
+			<Component Id="MyBlogsExeComponent" Guid="{3E5E54D8-E622-4884-8BC5-C074E71E0A3D}">
+				<File Id="MyBlogs.exe" KeyPath="yes" Source="$(var.BasePath)\MyBlogsRunner.exe" />
+			</Component>
+		</DirectoryRef>
 	</Fragment>
 	
 </Wix>
