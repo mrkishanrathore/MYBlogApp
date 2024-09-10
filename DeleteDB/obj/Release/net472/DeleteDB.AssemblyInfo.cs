@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DeleteDB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a289d6ae74bfd5a32f3e1b3333bad04792fcaa13")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+747c0930bc52ba9239814ab819ec675d3c7c7f82")]
 [assembly: System.Reflection.AssemblyProductAttribute("DeleteDB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DeleteDB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,5 +1,6 @@
 using System;
 using System.Data.SqlClient;
+using System.Web;
 using WixToolset.Dtf.WindowsInstaller;
 
 namespace DeleteDB
@@ -10,20 +11,51 @@ namespace DeleteDB
         public static ActionResult DeleteDatabase(Session session)
         {
             session.Log("Begin DeleteDatabase Custom Action.");
-            // Retrieve the connection string and database name from the installer properties
-            string connectionString = session["CONNECTIONSTRING"];
-            string DBName = session["DBNAME"];
-            session.Log(connectionString + DBName);
+
+            // Retrieve the connection string and database name from session properties or CustomActionData
+            string connectionString = null;
+            string DBName = null;
+
+            try
+            {
+                connectionString = session["CONNECTIONSTRING"];
+                DBName = session["DBNAME"];
+                session.Log($"Using session properties: CONNECTIONSTRING={connectionString}, DBNAME={DBName}");
+                // Try to get from session properties first
+            
+            }
+            catch (Exception ex)
+            {
+                session.Log("Error retrieving properties: " + ex.Message);
+            }
+            
+            
 
             if (string.IsNullOrWhiteSpace(DBName) || string.IsNullOrWhiteSpace(connectionString))
             {
-                session.Log("Database name or Connection String is empty or not provided." + DBName + connectionString);
-                return ActionResult.Success;
+                try
+                {
+                    // If session properties are not available, get from CustomActionData
+                    session.Log("Session properties not set, falling back to CustomActionData.");
+                    connectionString = session.CustomActionData["CONNECTIONSTRING"];
+                    connectionString = HttpUtility.UrlDecode(connectionString);
+                    DBName = session.CustomActionData["DBNAME"];
+                    session.Log($"Using CustomActionData: CONNECTIONSTRING={connectionString}, DBNAME={DBName}");
+
+                }
+                catch (Exception ex)
+                {
+                    session.Log("Error retrieving properties: " + ex.Message);
+                    session.Log("Database name or Connection String is empty or not provided: " +
+                            $"DBName={DBName}, ConnectionString={connectionString}");
+                    return ActionResult.Failure;
+                }
             }
 
             // Safely handle database names
             string formattedDBName = $"[{DBName}]";
 
+            // Query to check if the database exists and drop it if it does
             string checkDbExistsQuery = $@"
                 IF EXISTS (SELECT * FROM sys.databases WHERE name = N'{DBName}')
                 BEGIN

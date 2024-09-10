@@ -74,6 +74,10 @@
 		<CustomAction Id="CheckHttpsPortCertLoc" BinaryRef="CheckHttpsPortFile" DllEntry="CheckHttpsPort_CertFile" Execute="immediate" />
 		
 		<!-- On Uninstall And RollBack -->
+		<CustomAction Id="SetSessionForDBDeleteRollback"
+              Property="DeleteDatabaseActionRollBack"
+              Value="DBNAME=[DBNAME];CONNECTIONSTRING=[ENCODEDCONNECTIONSTRING];" />
+		<CustomAction Id="DeleteDatabaseActionRollBack" BinaryRef="DeleteDB" DllEntry="DeleteDatabase" Execute="rollback"/>
 		<CustomAction Id="DeleteDatabaseAction" BinaryRef="DeleteDB" DllEntry="DeleteDatabase" Execute="immediate"/>
 		
 		<!-- After Installation -->
@@ -102,6 +106,8 @@
 			<Custom Action="UpdateAppSettings" After="InstallFiles" Condition="NOT Installed" />
 			<Custom Action="EXECUTE_AFTER_FINALIZE" After="InstallFinalize" Condition="NOT Installed" />
 
+			 <Custom Action="SetSessionForDBDeleteRollback" Before="DeleteDatabaseActionRollBack" />
+			<Custom Action="DeleteDatabaseActionRollBack" Before="ExecuteSQLScript" Condition="NOT Installed"/>
 			<Custom Action="DeleteDatabaseAction" Before="RemoveFiles" Condition="REMOVE"/>
 		</InstallExecuteSequence>
 		

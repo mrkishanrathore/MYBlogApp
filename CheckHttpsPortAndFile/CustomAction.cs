@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Sockets;
+using System.Security.Cryptography.X509Certificates;
+using System.Security.Cryptography;
 using WixToolset.Dtf.WindowsInstaller;
 
 namespace CheckHttpsPortAndFile
@@ -17,6 +19,7 @@ namespace CheckHttpsPortAndFile
                 // Retrieve the properties
                 string httpsPort = session["HTTPSPORT"];
                 string certPath = session["CERTPATH"];
+                string certPass = session["CERTPASSWORD"];
 
                 // Check if HTTPSPORT is a valid port and if it is free
                 if (!int.TryParse(httpsPort, out int port) || !IsPortAvailable(port))
@@ -29,6 +32,12 @@ namespace CheckHttpsPortAndFile
                 if (!File.Exists(certPath))
                 {
                     session["VALIDATIONRESULT2"] = "File does not exist"; // File does not exist
+                    return ActionResult.Success;
+                }
+
+                if (!(ValidateSSLCertificate(certPath, certPass) == ""))
+                {
+                    session["VALIDATIONRESULT2"] = ValidateSSLCertificate(certPath, certPass);
                     return ActionResult.Success;
                 }
 
@@ -52,6 +61,41 @@ namespace CheckHttpsPortAndFile
             }
         }
 
+        public static string ValidateSSLCertificate(string filePath, string password)
+        {
+            try
+            {
+                // Attempt to load the certificate using the provided file path and password
+                X509Certificate2 certificate = new X509Certificate2(filePath, password);
+
+                // Check if the certificate is valid and has a private key
+                if (certificate.HasPrivateKey)
+                {
+                    return "";
+                }
+                else
+                {
+                    return "The certificate is valid but does not contain a private key.";
+                }
+            }
+            catch (CryptographicException ex)
+            {
+                // This exception is thrown if the password is incorrect or the file is invalid
+                if (ex.Message.Contains("The specified network password is not correct"))
+                {
+                    return "The password provided for the certificate is incorrect.";
+                }
+                else
+                {
+                    return "The file provided is not a valid SSL certificate.";
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any other exceptions that may occur
+                return $"An error occurred: {ex.Message}";
+            }
+        }
         private static bool IsPortAvailable(int port)
         {
             bool isAvailable = true;

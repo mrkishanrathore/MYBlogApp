@@ -1,6 +1,7 @@
 using System;
 using System.Data.SqlClient;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Web;
 using WixToolset.Dtf.WindowsInstaller;
 
@@ -13,9 +14,12 @@ namespace ExecuteSQLScript
         {
             string connectionString = null;
             string scriptPath = null;
+            string databaseName = null;
+            bool isDatabaseCreated = false;
 
             try
             {
+                // Retrieve connection string and script path from session data
                 string encodedConnectionString = session.CustomActionData["CONNECTIONSTRING"];
                 connectionString = HttpUtility.UrlDecode(encodedConnectionString);
                 scriptPath = session.CustomActionData["SQLSCRIPTPATH"];
@@ -29,6 +33,7 @@ namespace ExecuteSQLScript
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
+
                     foreach (var commandText in commands)
                     {
                         // Skip empty commands
@@ -42,6 +47,15 @@ namespace ExecuteSQLScript
                             trimmedCommandText += ";";
                         }
 
+                        session.Log("Executing :" + trimmedCommandText);
+                        // Try to extract database name if it's a CREATE DATABASE command
+                        if (!string.IsNullOrEmpty(GetDatabaseName(trimmedCommandText)))
+                        {
+                            databaseName = GetDatabaseName(trimmedCommandText);
+                            isDatabaseCreated = true;
+                        }
+
+                        // Execute the command
                         using (SqlCommand command = new SqlCommand(trimmedCommandText, connection))
                         {
                             command.ExecuteNonQuery();
@@ -55,8 +69,56 @@ namespace ExecuteSQLScript
             {
                 session.Log("Unable to execute SQL script. Connection string: " + connectionString);
                 session.Log("Script path: " + scriptPath);
+                session.Log("DBNAME: " + databaseName);
+                session.Log("DBNAMECreated: " + isDatabaseCreated);
                 session.Log("Error: " + e.Message);
-                return ActionResult.Success; // Changed to Failure for better error reporting
+
+                // If a database was created before the error, attempt to delete it
+                if (isDatabaseCreated && !string.IsNullOrWhiteSpace(databaseName))
+                {
+                    try
+                    {
+                        DeleteDatabase(connectionString, databaseName);
+                        session.Log($"Database '{databaseName}' deleted successfully.");
+                    }
+                    catch (Exception ex)
+                    {
+                        session.Log($"Failed to delete database '{databaseName}'. Error: " + ex.Message);
+                    }
+                }
+
+                return ActionResult.Failure;
+            }
+        }
+
+        // Method to extract database name from a CREATE DATABASE command
+        private static string GetDatabaseName(string commandText)
+        {
+            // Use a regular expression to match the CREATE DATABASE pattern and extract the database name
+            string pattern = @"CREATE\s+DATABASE\s+(\w+)";
+            var match = Regex.Match(commandText, pattern, RegexOptions.IgnoreCase);
+
+            if (match.Success)
+            {
+
+                return match.Groups[1].Value;
+            }
+
+            return null;
+        }
+
+        // Method to delete the database if an error occurs
+        private static void DeleteDatabase(string connectionString, string databaseName)
+        {
+            string dropDbQuery = $"DROP DATABASE [{databaseName}]";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(dropDbQuery, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
             }
         }
     }

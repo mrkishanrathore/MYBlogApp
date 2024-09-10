@@ -39,6 +39,15 @@ namespace CheckPortAndConnection
                     return ActionResult.Success;
                 }
 
+                string checkIfAdminString = CheckAdminPrivileges(connectionString);
+                if (!(checkIfAdminString == ""))
+                {
+                    validationResult = checkIfAdminString;
+                    session["VALIDATIONRESULT"] = validationResult;
+                    session.Log(validationResult);
+                    return ActionResult.Success;
+                }
+
                 session.Log("Checking For Existing Database " + dbName);
                 session["VALIDATIONRESULT"] = CheckDBExists(connectionString, dbName);
                 session["DBNAME"] = dbName;
@@ -61,6 +70,62 @@ namespace CheckPortAndConnection
                 return ActionResult.Success;
             }
             
+        }
+
+        private static string CheckAdminPrivileges(string connectionString)
+        {
+            string testDbName = "TestDbForPrivilegeCheck";
+
+            // Try to create a test database to check admin privileges
+            string createDbQuery = $"CREATE DATABASE {testDbName}";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(createDbQuery, connection))
+                    {
+                        command.ExecuteNonQuery(); // Attempt to create the database
+                    }
+                }
+
+                // If database creation succeeds, return success message
+                return "";
+            }
+            catch (SqlException ex)
+            {
+                // Check if the error is due to insufficient privileges
+                if (ex.Message.Contains("permission") || ex.Message.Contains("CREATE DATABASE permission denied"))
+                {
+                    return "Please provide a connection string that has administrative privileges.";
+                }
+                else
+                {
+                    // Return other SQL-related exceptions
+                    return $"Error occurred: {ex.Message}";
+                }
+            }
+            finally
+            {
+                // Clean up: Drop the test database if it was successfully created
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        string dropDbQuery = $"DROP DATABASE {testDbName}";
+                        using (SqlCommand command = new SqlCommand(dropDbQuery, connection))
+                        {
+                            command.ExecuteNonQuery(); // Attempt to drop the test database
+                        }
+                    }
+                }
+                catch
+                {
+                    // Ignore exceptions during cleanup
+                }
+            }
         }
 
         private static string CheckDBExists(string connStr, string dbName)
@@ -128,8 +193,6 @@ namespace CheckPortAndConnection
 
             return null;
         }
-
-
 
         private static bool IsPortAvailable(int port)
         {

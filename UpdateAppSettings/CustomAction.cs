@@ -1,8 +1,6 @@
 using System;
-using System.Diagnostics;
 using System.IO;
 using System.Web.NBitcoin;
-using System.Linq;
 using WixToolset.Dtf.WindowsInstaller;
 using Newtonsoft.Json.Linq;
 
@@ -89,7 +87,7 @@ namespace UpdateAppSettings
             catch (Exception ex)
             {
                 session.Log("Error: " + ex.Message);
-                return ActionResult.Success;
+                return ActionResult.Failure;
             }
         }
 

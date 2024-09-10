@@ -11,4 +11,8 @@
     <PackageReference Include="WixToolset.Dtf.CustomAction" Version="5.0.1" />
     <PackageReference Include="WixToolset.Dtf.WindowsInstaller" Version="5.0.1" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web" />
+  </ItemGroup>
 </Project>
